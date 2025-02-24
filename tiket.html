@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ticket</title>
+	<style>
+		table {
+			border-collapse: collapse;
+			width: 100%;
+		}
+		th, td {
+			text-align: left;
+			padding: 8px;
+			border-bottom: 1px solid #ddd;
+		}
+	</style>
+</head>
+<body>
+
+	<table>
+		<tr>
+			<th colspan="2">TICKET Antro.</th>
+		</tr>
+		<tr>
+			<td>Número de ticket:</td>
+			<td>12345</td>
+		</tr>
+		<tr>
+			<td>Fecha:</td>
+			<td>viernes </td>
+		</tr>
+		<tr>
+			<td>personas ingresadas</td>
+			<td>Hombre=Hombre+1,  Mujer=Mujer+1</td>
+        </tr>
+		<tr>
+			<td>cantidada a pagar</td>
+			<td>taq_hom=Hombre*100, taq_muj=Mujer*80</td>
+		</tr>
+	</table>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Antro</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            var per1=1;
+            var cper=0;
+            var edad=0;
+            var Hombre=0;
+            var Mujer=0;
+            var Sex=0;
+            var taq_muj=0;
+            var taq_hom=0;
+            while(per1=="1")
+            {  
+                edad=prompt(" ¿Que edad tienes? ")
+                if(Number(edad)>17)
+                {
+                    alert("Bienvenido")
+                    cper++;
+                    Sex=prompt("¿Cual es tu genero? <Masculino=1/Femenino=2>")
+                    alert("Costo: Hombres=100, Mujeres=80 ")
+                    if(Number(Sex==1)){
+                        Hombre=Hombre+1;
+                        taq_hom=Hombre*100;
+                    }
+                    else{
+                        Mujer=Mujer+1;
+                        taq_muj=Mujer*80;
+                    }
+                }
+                else{
+                    alert("No esta permitido el paso para usted")
+                }
+                per1=prompt("¿Mas personas? <Si=1/No=0")
+            }
+            alert("La asistencia de la noche es de "+cper+" personas, ")
+            alert(+Hombre+" hombres y "+Mujer+" mujeres")
+            alert("Dinero a pagar de hombres= " +taq_hom+ " dinero a pagar de mujeres= " +taq_muj)
+            // Agregamos el botón para imprimir
+            document.write("<button onclick='window.print()'>Imprimir ticket</button>")
+        </script>
+    </body>
+</html>
