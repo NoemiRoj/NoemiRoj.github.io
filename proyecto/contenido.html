@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.122.0">
+    <link rel="icon" type="image/x-icon" href="icon.jpg">
+    <title>Harry Potter</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <style>
+        body{
+            font-family: 'IM Fell English SC', serif;
+        }
+      .shadow:hover {
+        background: rgba(0, 0, 0, 0.75);
+        border-radius: 20px;
+      }
+
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+  </head>
+  <body>
+    
+    <!-- Twitter (X) Widgets Loader -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Check if Twitter's widget script is already loaded
+    if (!document.querySelector('script[src*="platform.twitter.com/widgets.js"]')) {
+      const script = document.createElement('script');
+      script.src = 'https://platform.twitter.com/widgets.js';
+      script.async = true;
+      script.charset = 'utf-8';
+      script.onload = function() {
+        // Trigger widget load after script loads
+        if (window.twttr && twttr.widgets) {
+          twttr.widgets.load();
+        }
+      };
+      document.body.appendChild(script);
+    } else if (window.twttr && twttr.widgets) {
+      // If script already exists, just load widgets
+      twttr.widgets.load();
+    }
+  });
+  
+  // Fallback in case DOMContentLoaded already fired
+  if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    if (window.twttr && twttr.widgets) {
+      twttr.widgets.load();
+    } else {
+      const script = document.createElement('script');
+      script.src = 'https://platform.twitter.com/widgets.js';
+      script.async = true;
+      document.body.appendChild(script);
+    }
+  }
+  </script>
+<header data-bs-theme="dark">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <!-- Logo -->
+      <a class="navbar-brand" href="#">Harry Potter</a>
+      
+      <!-- Botón de menú para pantallas pequeñas -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <!-- Menú colapsable -->
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          
+          <!-- Dropdown de Libros -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Libros</a>
+            <ul class="dropdown-menu" style="border-top: 5px solid white;">
+              <li><a class="dropdown-item" href="https://web.seducoahuila.gob.mx/biblioweb/upload/J.K.%20Rowling%20-%20La%20Piedra%20filosofal.pdf">La piedra filosofal</a></li>
+              <li><a class="dropdown-item" href="https://archive.org/details/harrypotterylaca0000rowl/page/n7/mode/2up">La cámara secreta</a></li>
+              <li><a class="dropdown-item" href="http://www.alconet.com.ar/varios/libros/e-book_h/Harry_Potter_y_El_Prisionero_de_Azkaban_03.pdf">El prisionero de Azkaban</a></li>
+              <li><a class="dropdown-item" href="http://www.alconet.com.ar/varios/libros/e-book_h/Harry_Potter_y_El_Caliz_de_Fuego_04.pdf">El cáliz de fuego</a></li>
+              <li><a class="dropdown-item" href="https://ia804603.us.archive.org/19/items/books_20211229/Harry-Potter-y-la-orden-del-fenix-J.-K.-Rowling.pdf">La Orden del Fénix</a></li>
+              <li><a class="dropdown-item" href="https://www.biblioteca-digital.universidadcolumbia.edu.mx/acervo/LITERATURA/Harry_Potter_y_el_misterio_del_Principe-J_K_Rowling.pdf">El misterio del príncipe</a></li>
+              <li><a class="dropdown-item" href="https://ia804603.us.archive.org/19/items/books_20211229/Harry%20Potter%20y%20las%20reliquias%20de%20la%20muerte%20-%20J.%20K.%20Rowling.pdf">Las reliquias de la Muerte</a></li>
+            </ul>
+          </li>
+          
+          <!-- Dropdown de Personajes -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Personajes</a>
+            <ul class="dropdown-menu" style="border-top: 5px solid white;">
+              <li><a class="dropdown-item" href="http://bloghogwarts.com/personajes/harry-james-potter/">Harry Potter</a></li>
+              <li><a class="dropdown-item" href="http://bloghogwarts.com/personajes/hermione-granger/">Hermione Granger</a></li>
+              <li><a class="dropdown-item" href="http://bloghogwarts.com/personajes/ron-weasley/">Ron Weasley</a></li>
+              <li><a class="dropdown-item" href="http://bloghogwarts.com/personajes/albus-dumbledore/">Dumbledore</a></li>
+              <li><a class="dropdown-item" href="http://bloghogwarts.com/personajes/lord-voldemort/">Voldemort</a></li>
+            </ul>
+          </li>
+          
+          <!-- Dropdown de Casas -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Casas de Hogwarts</a>
+            <ul class="dropdown-menu" style="border-top: 5px solid white;">
+              <li><a class="dropdown-item" href="https://harrypotter.fandom.com/es/wiki/Godric_Gryffindor">Gryffindor</a></li>
+              <li><a class="dropdown-item" href="https://harrypotter.fandom.com/es/wiki/Helga_Hufflepuff">Hufflepuff</a></li>
+              <li><a class="dropdown-item" href="https://harrypotter.fandom.com/es/wiki/Rowena_Ravenclaw">Ravenclaw</a></li>
+              <li><a class="dropdown-item" href="https://harrypotter.fandom.com/es/wiki/Salazar_Slytherin">Slytherin</a></li>
+            </ul>
+          </li>
+  
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Películas</a>
+            <ul class="dropdown-menu" style="border-top: 5px solid white;">
+              <li><a class="dropdown-item" href="https://harrypotter.fandom.com/es/wiki/Harry_Potter_y_la_piedra_filosofal_(pel%C3%ADcula)">Harry Potter y la piedra filosofal</a></li>
+              <li><a class="dropdown-item" href="https://harrypotter.fandom.com/es/wiki/Harry_Potter_y_la_c%C3%A1mara_secreta_(pel%C3%ADcula)">Harry Potter y la cámara secreta</a></li>
+              <li><a class="dropdown-item" href="https://harrypotter.fandom.com/es/wiki/Harry_Potter_y_el_prisionero_de_Azkaban_(pel%C3%ADcula)">Harry Potter y el prisionero de Azkaban</a></li>
+              <li><a class="dropdown-item" href="https://harrypotter.fandom.com/es/wiki/Harry_Potter_y_el_c%C3%A1liz_de_fuego_(pel%C3%ADcula)">Harry Potter y el cáliz de fuego</a></li>
+              <li><a class="dropdown-item" href="https://harrypotter.fandom.com/es/wiki/Harry_Potter_y_la_Orden_del_F%C3%A9nix_(pel%C3%ADcula)">Harry Potter y la orden del fénix</a></li>
+              <li><a class="dropdown-item" href="https://harrypotter.fandom.com/es/wiki/Harry_Potter_y_las_Reliquias_de_la_Muerte:_Parte_1">Harry Potter y las Reliquias de la Muerte: Parte 1</a></li>
+              <li><a class="dropdown-item" href="https://harrypotter.fandom.com/es/wiki/Harry_Potter_y_las_Reliquias_de_la_Muerte:_Parte_2">Harry Potter y las Reliquias de la Muerte: Parte 2</a></li>
+              <li><a class="dropdown-item" href="https://harrypotter.fandom.com/es/wiki/Animales_fant%C3%A1sticos_y_d%C3%B3nde_encontrarlos_(pel%C3%ADcula)">Animales Fantásticos y dónde encontrarlos</a></li>
+              <li><a class="dropdown-item" href="https://harrypotter.fandom.com/es/wiki/Animales_fant%C3%A1sticos:_Los_cr%C3%ADmenes_de_Grindelwald">Animales Fantásticos: los crímenes de Grindelwald</a></li>
+              <li><a class="dropdown-item" href="https://harrypotter.fandom.com/es/wiki/Animales_fant%C3%A1sticos:_Los_secretos_de_Dumbledore">Animales Fantásticos: los secretos de Dumbledore</a></li>
+            </ul>
+          </li>
+          
+          <!-- Enlaces adicionales -->
+          <li class="nav-item"><a class="nav-link active" aria-current="page"   href="contenido.html"> Contenido </a></li>
+          <li class="nav-item"><a class="nav-link" href="referencia.html">  Referencias </a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">  Contacto </a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+<main>
+
+  <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+    <div class="carousel-indicators shadow">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img width="100%" height = "100%" src="1.jpg">
+        <div class="container">
+          <div class="carousel-caption text-start" style="background: rgba(0, 0, 0, 0.75); border-radius: 20px;">
+            <h1>Sagas Harry Potter y Animales Fantasticos</h1>
+            <p class="opacity-75">Some representative placeholder content for the first slide of the carousel.</p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img width="100%" height = "100%" src="2.jpg">
+        <div class="container">
+          <div class="carousel-caption" style="background: rgba(0, 0, 0, 0.75); border-radius: 20px;">
+            <h1>Harry Potter</h1>
+            <p>Some representative placeholder content for the second slide of the carousel.</p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img width="100%" height = "100%" src="3.jpg">
+        <div class="container">
+          <div class="carousel-caption" style="background: rgba(0, 0, 0, 0.75); border-radius: 20px;">
+            <h1>casas Hogwarts</h1>
+            <p>Some representative placeholder content for the second slide of the carousel.</p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img width="100%" height = "100%" src="4.jpg">
+        <div class="container">
+          <div class="carousel-caption" style="background: rgba(0, 0, 0, 0.75); border-radius: 20px;">
+            <h1> Castillo Hogwarts</h1>
+            <p>Some representative placeholder content for the second slide of the carousel.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev shadow" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next shadow" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+  <div class="container marketing">
+    <!-- START THE FEATURETTES -->
+    <div class="row featurette">
+      <div class="col-md-6">
+        <h2 class="featurette-heading fw-normal lh-1">Sitio web oficial</h2>
+        <p class="lead">Sitio oficial de Harry Potter.</p>
+      </div>
+      <div class="col-md-6">
+        <iframe src="https://harrypotter.fandom.com/es/wiki/Harry_Potter" width="450px" height="450px"></iframe>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-6 order-md-2">
+        <h2 class="featurette-heading fw-normal lh-1">TikTok</h2>
+        <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+      </div>
+      <div class="col-md-6 order-md-1">
+        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@harrypotter/video/7485004269750373678" data-video-id="7485004269750373678" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@HarryPotter" href="https://www.tiktok.com/@harrypotter">@harrypotter</a> I won’t be ignored <a title="harrypotter" target="_blank" href="https://www.tiktok.com/tag/harrypotter">#harrypotter</a> <a title="potterheads" target="_blank" href="https://www.tiktok.com/tag/potterheads">#potterheads</a> 
+        <a title="HarryPotter" target="_blank" href="https://www.tiktok.com/tag/warnerbrosstudioharrypottered">#HarryPotter</a> <a target="_blank" title="♬ Halloween ・ cute horror song" href="https://www.tiktok.com/music/Halloween---cute-horror-song-6817180237894256641">♬ Halloween ・ cute horror song</a></section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
+        
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-6">
+        <h2 class="featurette-heading fw-normal lh-1">Facebook</h2>
+        <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
+      </div>
+      <div class="col-md-6">
+        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com/photo?fbid=1228550265305838&set=a.799084714919064" width="450px" height="850px" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-6 order-md-2">
+        <h2 class="featurette-heading fw-normal lh-1">Instagram</h2>
+        <p class="lead">Your Instagram post description here.</p>
+      </div>
+      <div class="col-md-6 order-md-1">
+        <!-- Instagram Post -->
+        <blockquote 
+          class="instagram-media" 
+          data-instgrm-captioned 
+          data-instgrm-permalink="https://www.instagram.com/p/DIOgsP5Mh-K/?igsh=dnBrc2hiZ3ZhNXlp&utm_source=ig_embed&utm_campaign=loading" 
+          data-instgrm-version="14" 
+          style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 10px 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"
+        >
+          <div style="padding:16px;">
+            <a href="https://www.instagram.com/p/DIOgsP5Mh-K/" style="color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;" target="_blank">
+              View Post on Instagram
+            </a>
+          </div>
+        </blockquote>
+        <!-- Instagram Embed Script MUST BE INSIDE THE SAME DIV -->
+        <script async defer src="https://www.instagram.com/embed.js"></script>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+    <div class="row featurette">
+    <div class="col-md-6">
+      <h2 class="featurette-heading fw-normal lh-1">Twitter</h2>
+      <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
+    </div>
+    <div class="col-md-6">
+      <blockquote class="twitter-tweet"><p lang="zxx" dir="ltr"><a href="https://twitter.com/harrypotter/status/1720168915848827259?ref_src=twsrc%5Etfw">pic.twitter.com/yoN80Mobdk</a></p>&mdash; LINKIN PARK (@linkinpark) <a href="https://twitter.com/harrypotter/status/1720168915848827259">July 20, 2017</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+  </div>
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
+
+
+  <!-- FOOTER -->
+  <footer class="container">
+    <p class="float-end"><a href="#">Back to top</a></p>
+    <p>&copy; 2025 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+  </footer>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+    </body>
+</html>
