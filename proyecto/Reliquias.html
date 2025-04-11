@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="icon.jpg">
+  <title>Las Reliquias de la Muerte</title>
+  
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background-color: #464242;
+      color: #000000;
+    }
+
+    .banner {
+      background: url('banner.jpg') no-repeat center center;
+      background-size: cover;
+      padding: 60px 20px;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    .navbar {
+      background-color: #2c2c2c;
+      padding: 10px 0;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar li {
+      margin: 0 20px;
+    }
+
+    .navbar a {
+      color: rgb(241, 240, 232);
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .navbar a:hover {
+      color: #fff;
+    }
+
+    .contenido {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 20px;
+    }
+
+    .articulo {
+      flex: 3;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      min-width: 300px;
+    }
+
+    .sidebar {
+      flex: 1;
+      padding: 20px;
+      background-color: #2c2c2c;
+      margin-left: 20px;
+      border-radius: 10px;
+      min-width: 200px;
+    }
+
+    .sidebar h3 {
+      color: rgb(255, 255, 255);
+    }
+
+    .sidebar img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background-color: #2c2c2c;
+      color: #ccc;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+    }
+        /* Style for the dropdown container */
+        .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Style for the dropdown button */
+    .dropdown button {
+      background-color: #2c2c2c;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    /* Style for the dropdown content */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      border-radius: 5px;
+    }
+
+    /* Style for dropdown links */
+    .dropdown-content a {
+      color: black;
+      padding: 10px 15px;
+      text-decoration: none;
+      display: block;
+    }
+
+    /* Change link color on hover */
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+
+    /* Show the dropdown content on hover */
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* Change button color on hover */
+    .dropdown:hover button {
+      background-color: #444;
+    }
+  </style>
+</head>
+<body>
+
+    <header>
+        <h1 style="text-align: center; color: white">Harry Potter - Libros</h1>
+    
+            <!-- Dropdown de Libros -->
+            <div class="dropdown">
+                <button>Libros</button>
+                <div class="dropdown-content">
+                    <a href="Piedra filosofal.html">La Piedra Filosofal</a>
+                    <a href="CamaraSecreta.html">La Cámara Secreta</a>
+                    <a href="Prisionero.html">El Prisionero de Azkaban</a>
+                    <a href="Caliz.html">El Caliz de Fuego</a>
+                    <a href="Orden.html">La Orden del Fenix</a>
+                    <a href="Misterio.html">El Misterio del Principe</a>
+                    <a class="nav-link active" aria-current="page" href="Reliquias.html">Las reliquias de la Muerte</a>
+                </div>
+            </div>
+    
+            <!-- Dropdown de Personajes -->
+            <div class="dropdown">
+                <button>Personajes</button>
+                <div class="dropdown-content">
+                    <a href="#">Harry Potter</a>
+                    <a href="#">Hermione Granger</a>
+                    <a href="#">Ron Weasley</a>
+                    <a href="#">Dumbledore</a>
+                    <a href="#">Voldemort</a>
+                </div>
+            </div>
+    
+            <!-- Dropdown de Casas de Hogwarts -->
+            <div class="dropdown">
+                <button>Casas de Hogwarts</button>
+                <div class="dropdown-content">
+                    <a href="#">Gryffindor</a>
+                    <a href="#">Hufflepuff</a>
+                    <a href="#">Ravenclaw</a>
+                    <a href="#">Slytherin</a>
+                </div>
+            </div>
+    
+            <!-- Dropdown de Películas -->
+            <div class="dropdown">
+                <button>Películas</button>
+                <div class="dropdown-content">
+                    <a href="#">La Piedra Filosofal</a>
+                    <a href="#">La Cámara Secreta</a>
+                    <a href="#">El Prisionero de Azkaban</a>
+                    <a href="#">El Caliz de Fuego</a>
+                    <a href="#">La Orden del Fenix</a>
+                    <a href="#">Reliquias de la Muerte: Parte 1</a>
+                    <a href="#">Reliquias de la Muerte: Parte 2</a>
+                    <a href="#">Animales Fantasticos y Donde Encontrarlos</a>
+                    <a href="#">Animales Fantasticos: Los Crimenes de Grindelwald</a>
+                    <a href="#">Animales Fantasticos: Los secretos de Dumbledore</a>
+                </div>
+            </div>
+    
+            <!-- Boton de Contenido -->
+            <button style="background-color: #2c2c2c; color: white; padding: 10px 20px; font-size: 16px; border: none; cursor: pointer; border-radius: 5px; margin: 5px;">
+                <a href="contenido.html" style="color: white; text-decoration: none;">Contenido</a>
+            </button>
+
+            <!-- Boton de Referencias -->
+            <button style="background-color: #2c2c2c; color: white; padding: 10px 20px; font-size: 16px; border: none; cursor: pointer; border-radius: 5px; margin: 5px;">
+                <a href="referencia.html" style="color: white; text-decoration: none;">Referencias</a>
+            </button>
+
+            <!-- Boton de Contacto -->
+            <button style="background-color: #2c2c2c; color: white; padding: 10px 20px; font-size: 16px; border: none; cursor: pointer; border-radius: 5px; margin: 5px;">
+                <a href="contacto.html" style="color: white; text-decoration: none;">Contacto</a>
+            </button>
+        </div>
+    </header>
+
+  <main class="contenido">
+    <section class="articulo">
+        <!-- Contenido de la seccion -->
+      <h2>Harry Potter y las Reliquias de la Muerte</h2>
+      <p>
+        Harry Potter y las Reliquias de la Muerte es el séptimo y último libro de la serie de novelas de Harry Potter, escritas por la autora británica J.K. Rowling. El libro se publicó el 21 de julio de 2007, cerrando la serie que empezó diez años antes con la publicación de Harry Potter y la piedra filosofal en 1997. Este último libro narra los acontecimientos que siguen directamente al libro anterior: Harry Potter y el misterio del príncipe (de 2005), y concluye con el enfrentamiento final, largamente esperado, entre Harry Potter y sus aliados, y el mago tenebroso Lord Voldemort y sus sirvientes, los mortífagos. Éste es el único libro de la serie que no incluye algún comentario de la crítica en el interior de la portada, en la que en cambio se puede leer: "Ahora presentamos la séptima y última entrega de la épica historia de Harry Potter".
+        <br><br>
+        La editorial Bloomsbury publicó el libro en el Reino Unido, su país de origen. Esta edición y la estadounidense se lanzaron globalmente en 93 países. El libro rompió récords de ventas, convirtiéndose en el libro más rápidamente vendido de todos los tiempos. A las 24 horas de su publicación se habían despachado ya más de once millones de copias. El récord anterior, nueve millones en el primer día, lo había obtenido su predecesor, El misterio del príncipe.
+        <br><br>
+        La Editorial Salamandra, dueña de los derechos de publicación del libro en español, envió el 19 de noviembre de 2007 un comunicado en internet en el que confirmaba la fecha de publicación en América Latina, España y Estados Unidos, para el 21 de febrero de 2008 a las 18:30 horas. El mismo día se publicarán además las ediciones en catalán y gallego. Asimismo, dejó en claro que la traducción oficial del título al español era Harry Potter y las Reliquias de la Muerte. Esta edición tendría una tirada inicial de aproximadamente un millón y medio de ejemplares.
+      </p>
+
+        <h2>
+        Trama
+        </h2>
+        <h3>
+          Dejando a los Dursley
+        </h3>
+        <p>
+          Como la protección que la casa de los Dursley proporciona a Harry Potter expirará cuando cumpla 17 años, la Orden del Fénix decide separar a los Dursley y a Harry por seguridad. Los Dursley se marchan para ser escondidos en un lugar seguro, pero antes de eso Dudley se disculpa por todo lo que le ha hecho pasar a Harry desde que eran pequeños, ya que los dementores que lo atacaron dos años antes le hicieron ver cómo era él en realidad. Esa misma noche aparece la Orden del Fénix, y Ojoloco Moody presenta su plan: seis personas se harán pasar por Harry usando la poción multijugos, mientras que Remus Lupin, Arthur Weasley, Bill Weasley, Nymphadora Tonks, Kingsley Shacklebolt, Ojoloco y Hagrid los escoltarán hasta diversas casas seguras desde las cuales podrán viajar hasta la Madriguera en traslador, con el fin de despistar a los mortífagos. Durante el viaje, Harry utiliza el hechizo Expelliarmus contra Stan Shunpike, que aparenta estar bajo los efectos de la maldición Imperius, pero esto llama la atención sobre él, ya que los mortífagos consideran ese hechizo el distintivo de Harry. Voldemort sigue a Harry, volando sin escoba, y lanza un hechizo contra Harry utilizando la varita de Lucius Malfoy, pero la varita de Harry actúa por su cuenta y responde al ataque de Voldemort, destruyendo la varita de Malfoy en el proceso. Al final, casi todos llegan a la Madriguera, pero Hedwig muere cuando una maldición la golpea por accidente, Ojoloco muere a manos de Voldemort después de que Mundungus Fletcher se escapara y George Weasley pierde una de sus orejas cuando Severus Snape lo ataca.
+          <br><br>
+          Unos días después, durante el cumpleaños de Harry, en el que éste recibe el reloj de Fabian Prewett por parte de los señores Weasley y un intenso beso por parte de Ginny Weasley, el Ministro de Magia Rufus Scrimgeour acude al encuentro de Harry, Ron Weasley, y Hermione Granger para entregarles el legado del testamento de Albus Dumbledore. Ron recibe el Desiluminador, un aparato mágico que puede capturar la luz de fuentes cercanas y liberarla de nuevo si es necesario; Hermione recibe Los Cuentos de Beedle el Bardo, un libro con historias infantiles escrito en Runas Antiguas y Harry hereda la espada de Godric Gryffindor y la snitch que capturó en su primer partido de quidditch con la boca. El Ministro retiene la espada, alegando que ésta no era nunca propiedad de Dumbledore y por lo tanto no podía regalarla.
+        </p>
+        <!-- Link de la referencia -->
+        <p><a href="https://harrypotter.fandom.com/es/wiki/Harry_Potter_y_las_Reliquias_de_la_Muerte">Saber mas...</a></p>
+    </section>
+
+    <aside class="sidebar">
+        <!-- Imagen del libro/pelicula/casa/personaje -->
+      <h3>Harry Potter y las Reliquias de la Muerte</h3>
+      <img src="Reliquias.jpg" alt="Harry Potter y las Reliquias de la Muerte">
+    </aside>
+  </main>
+
+  <footer>
+    <p>© 2025 Harry Potter</p>
+  </footer>
+
+</body>
+</html>

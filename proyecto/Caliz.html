@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="icon.jpg">
+  <title>Harry Potter y el cáliz de fuego</title>
+  
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background-color: #464242;
+      color: #000000;
+    }
+
+    .banner {
+      background: url('banner.jpg') no-repeat center center;
+      background-size: cover;
+      padding: 60px 20px;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    .navbar {
+      background-color: #2c2c2c;
+      padding: 10px 0;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar li {
+      margin: 0 20px;
+    }
+
+    .navbar a {
+      color: rgb(241, 240, 232);
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .navbar a:hover {
+      color: #fff;
+    }
+
+    .contenido {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 20px;
+    }
+
+    .articulo {
+      flex: 3;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      min-width: 300px;
+    }
+
+    .sidebar {
+      flex: 1;
+      padding: 20px;
+      background-color: #2c2c2c;
+      margin-left: 20px;
+      border-radius: 10px;
+      min-width: 200px;
+    }
+
+    .sidebar h3 {
+      color: rgb(255, 255, 255);
+    }
+
+    .sidebar img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background-color: #2c2c2c;
+      color: #ccc;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+    }
+        /* Style for the dropdown container */
+        .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Style for the dropdown button */
+    .dropdown button {
+      background-color: #2c2c2c;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    /* Style for the dropdown content */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      border-radius: 5px;
+    }
+
+    /* Style for dropdown links */
+    .dropdown-content a {
+      color: black;
+      padding: 10px 15px;
+      text-decoration: none;
+      display: block;
+    }
+
+    /* Change link color on hover */
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+
+    /* Show the dropdown content on hover */
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* Change button color on hover */
+    .dropdown:hover button {
+      background-color: #444;
+    }
+  </style>
+</head>
+<body>
+
+    <header>
+        <h1 style="text-align: center; color: white">Harry Potter - Libros</h1>
+    
+            <!-- Dropdown de Libros -->
+            <div class="dropdown">
+                <button>Libros</button>
+                <div class="dropdown-content">
+                    <a href="Piedra filosofal.html">La Piedra Filosofal</a>
+                    <a href="CamaraSecreta.html">La Cámara Secreta</a>
+                    <a href="Prisionero.html">El Prisionero de Azkaban</a>
+                    <a class="nav-link active" aria-current="page" href="Caliz.html">El Caliz de Fuego</a>
+                    <a href="Orden.html">La Orden del Fenix</a>
+                    <a href="Misterio.html">El Misterio del Principe</a>
+                    <a href="Reliquias.html">Las reliquias de la Muerte</a>
+                </div>
+            </div>
+    
+            <!-- Dropdown de Personajes -->
+            <div class="dropdown">
+                <button>Personajes</button>
+                <div class="dropdown-content">
+                    <a href="#">Harry Potter</a>
+                    <a href="#">Hermione Granger</a>
+                    <a href="#">Ron Weasley</a>
+                    <a href="#">Dumbledore</a>
+                    <a href="#">Voldemort</a>
+                </div>
+            </div>
+    
+            <!-- Dropdown de Casas de Hogwarts -->
+            <div class="dropdown">
+                <button>Casas de Hogwarts</button>
+                <div class="dropdown-content">
+                    <a href="#">Gryffindor</a>
+                    <a href="#">Hufflepuff</a>
+                    <a href="#">Ravenclaw</a>
+                    <a href="#">Slytherin</a>
+                </div>
+            </div>
+    
+            <!-- Dropdown de Películas -->
+            <div class="dropdown">
+                <button>Películas</button>
+                <div class="dropdown-content">
+                    <a href="#">La Piedra Filosofal</a>
+                    <a href="#">La Cámara Secreta</a>
+                    <a href="#">El Prisionero de Azkaban</a>
+                    <a href="#">El Caliz de Fuego</a>
+                    <a href="#">La Orden del Fenix</a>
+                    <a href="#">Reliquias de la Muerte: Parte 1</a>
+                    <a href="#">Reliquias de la Muerte: Parte 2</a>
+                    <a href="#">Animales Fantasticos y Donde Encontrarlos</a>
+                    <a href="#">Animales Fantasticos: Los Crimenes de Grindelwald</a>
+                    <a href="#">Animales Fantasticos: Los secretos de Dumbledore</a>
+                </div>
+            </div>
+    
+            <!-- Boton de Contenido -->
+            <button style="background-color: #2c2c2c; color: white; padding: 10px 20px; font-size: 16px; border: none; cursor: pointer; border-radius: 5px; margin: 5px;">
+                <a href="contenido.html" style="color: white; text-decoration: none;">Contenido</a>
+            </button>
+
+            <!-- Boton de Referencias -->
+            <button style="background-color: #2c2c2c; color: white; padding: 10px 20px; font-size: 16px; border: none; cursor: pointer; border-radius: 5px; margin: 5px;">
+                <a href="referencia.html" style="color: white; text-decoration: none;">Referencias</a>
+            </button>
+
+            <!-- Boton de Contacto -->
+            <button style="background-color: #2c2c2c; color: white; padding: 10px 20px; font-size: 16px; border: none; cursor: pointer; border-radius: 5px; margin: 5px;">
+                <a href="contacto.html" style="color: white; text-decoration: none;">Contacto</a>
+            </button>
+        </div>
+    </header>
+
+  <main class="contenido">
+    <section class="articulo">
+        <!-- Contenido de la seccion -->
+      <h2>Harry Potter y el cáliz de fuego</h2>
+      <p>
+        Harry Potter y el cáliz de fuego es el cuarto libro de la serie Harry Potter escrito por la autora británica J. K. Rowling. Fue sacado a la venta en el año 2000, y ganó un premio Hugo en el 2001. Rowling, antes de que se saque el libro a la venta, advirtió que uno de los personajes del libro moriría, dejando mucha especulación acerca de quién podría ser.
+        <br><br>
+        El libro ha sido uno de los pocos libros de literatura juvenil que ha sido muy esperado y muy aclamado, junto a sus sucesores, Harry Potter y la Orden del Fénix, Harry Potter y el misterio del príncipe y Harry Potter y las Reliquias de la Muerte.
+        <br><br>
+        Tras la trilogía algo más infantil que son los anteriores tres volúmenes, el libro se multiplica de tamaño. Los primeros tres libros contenían 254, 287 y 359 páginas, mientras que, desde Harry Potter y el cáliz de fuego, los libros son de alrededor de 600 páginas.
+        <br><br>
+        Si bien no ha sido el objeto de la autora impactar sobre la literatura universal por su estilo, el académico franco-americano Daniel Herrendorf propone desde 2003 a la Academia Sueca, y a nombre del Fondo de cultura y mecenazgo del sur, que considere la obra para el Premio Nobel de Literatura, petición que Herrendorf reitera anualmente.
+        <br><br>
+        En el 2005 se realizó una película basada en este libro, dirigida por Mike Newell.
+      </p>
+
+        <h2>
+        Trama
+        </h2>
+        <h3>
+          El campeonato mundial de quidditch
+        </h3>
+        <p>
+          El comienzo del libro ofrece un punto de vista distinto al de Harry. Se conoce la historia de Frank Bryce, que era sirviente de la familia Ryddle. Todo el mundo pensaba que él había sido el culpable del asesinato de Tom Ryddle Sr. y sus padres. Sin embargo, Bryce demostró su inocencia, dado que la autopsia no reveló ningún indicio de que hubiesen sido asesinados; de hecho, no se encontró herida ni daño de ningún tipo que explicase por qué los Ryddle habían muerto.
+          <br><br>
+          La historia regresa al presente, cuando Bryce ve luz en la mansión de los Ryddle. Sabe que esto es imposible, pues nadie entra ahí, y asume que son niños traviesos. Cuando llega a la mansión, entra y va a una habitación iluminada. En la habitación, escucha dos voces, una de alguien llamado Lord Voldemort, y otra de un hombre identificado como Colagusano, hablando de alguien llamado Harry Potter, y del asesinato de una tal Bertha Jorkins. Una serpiente, llamada Nagini, advierte la presencia de Frank, y éste admite haber escuchado sus intenciones de asesinar a alguien. Así pues Voldemort ordena a Colagusano, su vasallo, que gire la silla en que estaba sentado. El vasallo le obedece, Voldemort realiza la maldición Avada Kedavra con su varita y Frank cae muerto.
+          <br><br>
+          La novela regresa al punto de vista de Harry, quien sabe lo sucedido, pues lo ha contemplado en un sueño. Además, siente su agudo dolor en su cicatriz en forma de rayo. Decide escribir a Sirius Black, su padrino, quien le rogó que le informara de todo suceso extraño que ocurriera. Posteriormente, Harry recibe una carta de Ron, su amigo, en la que le invita a su casa y a ver el Mundial de Quidditch.
+          <br><br>
+          Como estaba previsto, los Weasley llegan a casa de los Dursley y llevan a Harry a la Madriguera. Días después comienza el mundial de Quiddich, al que asisten mediante un traslador, objeto aparentemente vulgar, pero que transporta a un sitio determinado a quien o quienes lo tocan. En el equipo de Bulgaria, Harry se fija en alguien llamado Viktor Krum, quien es el buscador del equipo. Además Harry conoce a la elfina doméstica Winky, y Hermione comienza a sentir pena por los elfos. Los gemelos Fred y George Weasley ganan una apuesta realizada a Ludo Bagman, quién les entrega oro Leprechaun.
+          <br><br>
+          Finalizado el partido, un grupo de mortífagos maltratan a cuatro muggles. Harry, Ron y Hermione huyen al bosque del sitio. Momentos después observan la Marca Tenebrosa en el cielo. Esta, es la marca que identifica a Voldemort. Barty Crouch, aparece junto a un grupo de magos, dirigido por Arthur Weasley, y acusan a Harry, Ron y Hermione de haber invocado la marca. Barty Crouch busca entre los arbustos y encuentra a la elfina doméstica, Winky, que había robado la varita de Harry. Amos Diggory utiliza Priori Incantatem para definir el último hechizo que había realizado la varita. Se descubre que ésta invocó la Marca Tenebrosa, y Winky, es acusada y despedida.
+        </p>
+        <!-- Link de la referencia -->
+        <p><a href="https://harrypotter.fandom.com/es/wiki/Harry_Potter_y_el_cáliz_de_fuego">Saber mas...</a></p>
+    </section>
+
+    <aside class="sidebar">
+        <!-- Imagen del libro/pelicula/casa/personaje -->
+      <h3>Harry Potter y el cáliz de fuego</h3>
+      <img src="Caliz.jpg" alt="Harry Potter y la Piedra Filosofal">
+    </aside>
+  </main>
+
+  <footer>
+    <p>© 2025 Harry Potter</p>
+  </footer>
+
+</body>
+</html>

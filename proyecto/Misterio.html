@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="icon.jpg">
+  <title>El misterio del príncipe</title>
+  
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background-color: #464242;
+      color: #000000;
+    }
+
+    .banner {
+      background: url('banner.jpg') no-repeat center center;
+      background-size: cover;
+      padding: 60px 20px;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    .navbar {
+      background-color: #2c2c2c;
+      padding: 10px 0;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar li {
+      margin: 0 20px;
+    }
+
+    .navbar a {
+      color: rgb(241, 240, 232);
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .navbar a:hover {
+      color: #fff;
+    }
+
+    .contenido {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 20px;
+    }
+
+    .articulo {
+      flex: 3;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      min-width: 300px;
+    }
+
+    .sidebar {
+      flex: 1;
+      padding: 20px;
+      background-color: #2c2c2c;
+      margin-left: 20px;
+      border-radius: 10px;
+      min-width: 200px;
+    }
+
+    .sidebar h3 {
+      color: rgb(255, 255, 255);
+    }
+
+    .sidebar img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background-color: #2c2c2c;
+      color: #ccc;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+    }
+        /* Style for the dropdown container */
+        .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Style for the dropdown button */
+    .dropdown button {
+      background-color: #2c2c2c;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    /* Style for the dropdown content */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      border-radius: 5px;
+    }
+
+    /* Style for dropdown links */
+    .dropdown-content a {
+      color: black;
+      padding: 10px 15px;
+      text-decoration: none;
+      display: block;
+    }
+
+    /* Change link color on hover */
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+
+    /* Show the dropdown content on hover */
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* Change button color on hover */
+    .dropdown:hover button {
+      background-color: #444;
+    }
+  </style>
+</head>
+<body>
+
+    <header>
+        <h1 style="text-align: center; color: white">Harry Potter - Libros</h1>
+    
+            <!-- Dropdown de Libros -->
+            <div class="dropdown">
+                <button>Libros</button>
+                <div class="dropdown-content">
+                    <a href="Piedra filosofal.html">La Piedra Filosofal</a>
+                    <a href="CamaraSecreta.html">La Cámara Secreta</a>
+                    <a href="Prisionero.html">El Prisionero de Azkaban</a>
+                    <a href="Caliz.html">El Caliz de Fuego</a>
+                    <a href="Orden.html">La Orden del Fenix</a>
+                    <a class="nav-link active" aria-current="page" href="Misterio.html">El Misterio del Principe</a>
+                    <a href="Reliquias.html">Las reliquias de la Muerte</a>
+                </div>
+            </div>
+    
+            <!-- Dropdown de Personajes -->
+            <div class="dropdown">
+                <button>Personajes</button>
+                <div class="dropdown-content">
+                    <a href="#">Harry Potter</a>
+                    <a href="#">Hermione Granger</a>
+                    <a href="#">Ron Weasley</a>
+                    <a href="#">Dumbledore</a>
+                    <a href="#">Voldemort</a>
+                </div>
+            </div>
+    
+            <!-- Dropdown de Casas de Hogwarts -->
+            <div class="dropdown">
+                <button>Casas de Hogwarts</button>
+                <div class="dropdown-content">
+                    <a href="#">Gryffindor</a>
+                    <a href="#">Hufflepuff</a>
+                    <a href="#">Ravenclaw</a>
+                    <a href="#">Slytherin</a>
+                </div>
+            </div>
+    
+            <!-- Dropdown de Películas -->
+            <div class="dropdown">
+                <button>Películas</button>
+                <div class="dropdown-content">
+                    <a href="#">La Piedra Filosofal</a>
+                    <a href="#">La Cámara Secreta</a>
+                    <a href="#">El Prisionero de Azkaban</a>
+                    <a href="#">El Caliz de Fuego</a>
+                    <a href="#">La Orden del Fenix</a>
+                    <a href="#">Reliquias de la Muerte: Parte 1</a>
+                    <a href="#">Reliquias de la Muerte: Parte 2</a>
+                    <a href="#">Animales Fantasticos y Donde Encontrarlos</a>
+                    <a href="#">Animales Fantasticos: Los Crimenes de Grindelwald</a>
+                    <a href="#">Animales Fantasticos: Los secretos de Dumbledore</a>
+                </div>
+            </div>
+    
+            <!-- Boton de Contenido -->
+            <button style="background-color: #2c2c2c; color: white; padding: 10px 20px; font-size: 16px; border: none; cursor: pointer; border-radius: 5px; margin: 5px;">
+                <a href="contenido.html" style="color: white; text-decoration: none;">Contenido</a>
+            </button>
+
+            <!-- Boton de Referencias -->
+            <button style="background-color: #2c2c2c; color: white; padding: 10px 20px; font-size: 16px; border: none; cursor: pointer; border-radius: 5px; margin: 5px;">
+                <a href="referencia.html" style="color: white; text-decoration: none;">Referencias</a>
+            </button>
+
+            <!-- Boton de Contacto -->
+            <button style="background-color: #2c2c2c; color: white; padding: 10px 20px; font-size: 16px; border: none; cursor: pointer; border-radius: 5px; margin: 5px;">
+                <a href="contacto.html" style="color: white; text-decoration: none;">Contacto</a>
+            </button>
+        </div>
+    </header>
+
+  <main class="contenido">
+    <section class="articulo">
+        <!-- Contenido de la seccion -->
+      <h2>Harry Potter y el misterio del príncipe</h2>
+      <p>
+        Harry Potter y el misterio del príncipe es el título con que se se publicó en castellano el sexto libro de la serie Harry Potter, escrita por J. K. Rowling. El título original es Harry Potter and the Half-Blood Prince (cuya traducción literal es Harry Potter y el príncipe mestizo). Fue el segundo cambio de título para los libros de la serie. El primer caso ocurrió en Harry Potter y la cámara secreta.
+        <br><br>
+        Fue publicado en el año 2005, poco antes del lanzamiento de la cuarta película de la saga. El libro dio datos importantes que tuvieron que tomar en cuenta antes de estrenar la película.
+        <br><br>
+        La historia muestra a un Harry diferente. A diferencia de lo que ocurre en Harry Potter y la Orden del Fénix, Harry ha madurado y se halla dispuesto a aceptar su pasado y su misión de destruir a Lord Voldemort.
+        <br><br>
+        En este libro se adopta por quinta vez un punto de vista diferente al de Harry. Ello ocurre de forma parcial, sólo en los primeros dos capítulos ("El otro ministro" y "La calle de la Hilandera"). Los otros cuatro casos se encuentran en el primer capítulo de Harry Potter y la piedra filosofal, luego en el primer y el segundo partido de quidditch del libro, y en el primer capítulo de Harry Potter y el cáliz de fuego. J. K. Rowling ha expresado que este libro muestra lo que ella quería que mostrase y dijo que posiblemente era su favorito, antes de publicar el libro final. La extensión es similar a la del cuarto volumen de la serie. J. K. Rowling dijo que este libro es como un "primer tomo" del final de la historia.
+        <br><br>
+        Si bien no ha sido el objeto de la autora impactar sobre la literatura universal por su estilo, el académico franco-americano Daniel Herrendorf propone desde 2003 a la Academia Sueca, y a nombre del Fondo de cultura y mecenazgo del sur, que considere la obra para el Premio Nobel de Literatura, petición que reitera anualmente.
+        <br><br>
+        El libro vendió nueve millones de copias en sus primeras 24 horas de venta, lo cual causó un récord jamás alcanzado hasta ese entonces. Sin embargo, éste fue superado por el siguiente libro de la serie, Harry Potter y las Reliquias de la Muerte[1].
+        <br><br>
+        Una película basada en el libro fue lanzada el 16 de julio del 2009, con Steve Kloves en el guión diálogo, y David Yates como directo.
+      </p>
+
+        <h2>
+        Trama
+        </h2>
+        <h3>
+          Comienzo del año escolar
+        </h3>
+        <p>
+          El libro comienza en el verano de 1996, desde el punto de vista del Primer Ministro de Inglaterra. Éste se encuentra frustrado pues en el país habían sucedido varios accidentes que se le habían adjudicado a la mala administración del ministro. De repente, Fudge lo visita para decirle que ha sido despedido y ahora Rufus Scrimgeour ocupa el puesto de Ministro de Magia. El primer ministro recuerda que ésta no es la primera vez que Fudge lo visita, pues ya lo había hecho antes y que cada vez que lo visitaba, le traía noticias peores. Es entonces cuando Fudge le revela que todos los accidentes que ha habido han sido por causa de los mortífagos, y el primer ministro se enfurece con él diciéndole que debe de hacer algo, que para eso tiene el poder de la magia. Se le responde que desafortunadamente, los mortifagos también pueden hacer magia.
+          <br><br>
+          Luego, el punto de vista cambia a ser de Narcissa Malfoy, que visita junto a Bellatrix Lestrange a Severus Snape, de quien se revela que trabaja para Lord Voldemort. Narcissa le dice que ayude a su hijo a realizar una tarea que el Señor Tenebroso le ha otorgado. Snape revela que ya conoce cuál es la tarea, y realiza el Juramento Inquebrantable, jurando que ayudará a Draco.
+          <br><br>
+          El punto de vista luego vuelve a Harry, quien ha recibido una carta de Albus Dumbledore informándole que lo llevará a la Madriguera a pasar el resto del verano con los Weasley. Cuando Dumbledore llega, le informa a sus tíos que cuando Harry cumpla 17 años, la protección que le dejó su madre se acabará, pues en el mundo mágico cuando alguien cumple 17 años, se convierte en mayor de edad.
+          <br><br>
+          Dumbledore y Harry se van de su casa. Dumbledore le informa a Harry que necesita que lo acompañe antes a la casa de un viejo amigo. Harry no tarda en notar que la mano de Dumbledore está malherida.
+          <br><br>
+          Cuando llegan a la casa de quien Dumbledore se refería, encuentran la casa vacía y desordenada con manchas de sangre en las paredes, pero luego es revelado que esa persona se estaba escondiendo de los mortífagos. La persona es revelada como Horace Slughorn, un viejo profesor de Hogwarts. Harry, de alguna forma, logra convencerlo de que vuelva a enseñar en la escuela, y el profesor acepta el puesto de maestro de pociones.
+          <br><br>
+          Dumbledore lleva a Harry a la Madriguera, la casa de los Weasley. Ahí Harry ve a Tonks, a quien se la ve más triste que habitualmente.
+        </p>
+        <!-- Link de la referencia -->
+        <p><a href="https://harrypotter.fandom.com/es/wiki/Harry_Potter_y_el_misterio_del_príncipe">Saber mas...</a></p>
+    </section>
+
+    <aside class="sidebar">
+        <!-- Imagen del libro/pelicula/casa/personaje -->
+      <h3>Harry Potter y el misterio del príncipe</h3>
+      <img src="Misterio.jpg" alt="Harry Potter y el misterio del príncipe">
+    </aside>
+  </main>
+
+  <footer>
+    <p>© 2025 Harry Potter</p>
+  </footer>
+
+</body>
+</html>

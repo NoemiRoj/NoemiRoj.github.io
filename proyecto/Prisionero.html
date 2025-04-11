@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="icon.jpg">
+  <title>El Prisionero de Azkaban</title>
+  
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background-color: #464242;
+      color: #000000;
+    }
+
+    .banner {
+      background: url('banner.jpg') no-repeat center center;
+      background-size: cover;
+      padding: 60px 20px;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    .navbar {
+      background-color: #2c2c2c;
+      padding: 10px 0;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar li {
+      margin: 0 20px;
+    }
+
+    .navbar a {
+      color: rgb(241, 240, 232);
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .navbar a:hover {
+      color: #fff;
+    }
+
+    .contenido {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 20px;
+    }
+
+    .articulo {
+      flex: 3;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      min-width: 300px;
+    }
+
+    .sidebar {
+      flex: 1;
+      padding: 20px;
+      background-color: #2c2c2c;
+      margin-left: 20px;
+      border-radius: 10px;
+      min-width: 200px;
+    }
+
+    .sidebar h3 {
+      color: rgb(255, 255, 255);
+    }
+
+    .sidebar img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background-color: #2c2c2c;
+      color: #ccc;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+    }
+        /* Style for the dropdown container */
+        .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Style for the dropdown button */
+    .dropdown button {
+      background-color: #2c2c2c;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    /* Style for the dropdown content */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      border-radius: 5px;
+    }
+
+    /* Style for dropdown links */
+    .dropdown-content a {
+      color: black;
+      padding: 10px 15px;
+      text-decoration: none;
+      display: block;
+    }
+
+    /* Change link color on hover */
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+
+    /* Show the dropdown content on hover */
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* Change button color on hover */
+    .dropdown:hover button {
+      background-color: #444;
+    }
+  </style>
+</head>
+<body>
+
+    <header>
+        <h1 style="text-align: center; color: white">Harry Potter - Libros</h1>
+    
+            <!-- Dropdown de Libros -->
+            <div class="dropdown">
+                <button>Libros</button>
+                <div class="dropdown-content">
+                    <a href="Piedra filosofal.html">La Piedra Filosofal</a>
+                    <a href="CamaraSecreta.html">La Cámara Secreta</a>
+                    <a class="nav-link active" aria-current="page" href="Prisionero.html">El Prisionero de Azkaban</a>
+                    <a href="Caliz.html">El Caliz de Fuego</a>
+                    <a href="Orden.html">La Orden del Fenix</a>
+                    <a href="Misterio.html">El Misterio del Principe</a>
+                    <a href="Reliquias.html">Las reliquias de la Muerte</a>
+                </div>
+            </div>
+    
+            <!-- Dropdown de Personajes -->
+            <div class="dropdown">
+                <button>Personajes</button>
+                <div class="dropdown-content">
+                    <a href="#">Harry Potter</a>
+                    <a href="#">Hermione Granger</a>
+                    <a href="#">Ron Weasley</a>
+                    <a href="#">Dumbledore</a>
+                    <a href="#">Voldemort</a>
+                </div>
+            </div>
+    
+            <!-- Dropdown de Casas de Hogwarts -->
+            <div class="dropdown">
+                <button>Casas de Hogwarts</button>
+                <div class="dropdown-content">
+                    <a href="#">Gryffindor</a>
+                    <a href="#">Hufflepuff</a>
+                    <a href="#">Ravenclaw</a>
+                    <a href="#">Slytherin</a>
+                </div>
+            </div>
+    
+            <!-- Dropdown de Películas -->
+            <div class="dropdown">
+                <button>Películas</button>
+                <div class="dropdown-content">
+                    <a href="#">La Piedra Filosofal</a>
+                    <a href="#">La Cámara Secreta</a>
+                    <a href="#">El Prisionero de Azkaban</a>
+                    <a href="#">El Caliz de Fuego</a>
+                    <a href="#">La Orden del Fenix</a>
+                    <a href="#">Reliquias de la Muerte: Parte 1</a>
+                    <a href="#">Reliquias de la Muerte: Parte 2</a>
+                    <a href="#">Animales Fantasticos y Donde Encontrarlos</a>
+                    <a href="#">Animales Fantasticos: Los Crimenes de Grindelwald</a>
+                    <a href="#">Animales Fantasticos: Los secretos de Dumbledore</a>
+                </div>
+            </div>
+    
+            <!-- Boton de Contenido -->
+            <button style="background-color: #2c2c2c; color: white; padding: 10px 20px; font-size: 16px; border: none; cursor: pointer; border-radius: 5px; margin: 5px;">
+                <a href="contenido.html" style="color: white; text-decoration: none;">Contenido</a>
+            </button>
+
+            <!-- Boton de Referencias -->
+            <button style="background-color: #2c2c2c; color: white; padding: 10px 20px; font-size: 16px; border: none; cursor: pointer; border-radius: 5px; margin: 5px;">
+                <a href="referencia.html" style="color: white; text-decoration: none;">Referencias</a>
+            </button>
+
+            <!-- Boton de Contacto -->
+            <button style="background-color: #2c2c2c; color: white; padding: 10px 20px; font-size: 16px; border: none; cursor: pointer; border-radius: 5px; margin: 5px;">
+                <a href="contacto.html" style="color: white; text-decoration: none;">Contacto</a>
+            </button>
+        </div>
+    </header>
+
+  <main class="contenido">
+    <section class="articulo">
+        <!-- Contenido de la seccion -->
+      <h2>Harry Potter y el prisionero de Azkaban</h2>
+      <p>
+        Harry Potter y el prisionero de Azkaban es el tercero de los siete libros escritos de la serie Harry Potter, por J. K. Rowling. Fue publicado el 8 de julio de 1999. La película basada en el libro se estrenó el 4 de junio del 2004, dirigida por el director mexicano Alfonso Cuarón.
+        <br><br>
+        Este libro es el único de la serie que no trata directamente de Lord Voldemort, sino que trata más acerca de los padres de Harry y los amigos que tuvieron (tales como Remus Lupin y Peter Pettigrew). Los fanáticos de la serie presionaron a la autora para que terminase el libro. Harry Potter y el prisionero de Azkaban es considerado por muchos el mejor libro de la serie.
+        <br><br>
+        En este libro Harry ya tiene 13 años, y por primera vez en la serie comienza a haber rasgos de amor y odio. La película muestra esto, aunque no es uno de los puntos más importantes del libro.
+        <br><br>
+        La trama del libro describe que un peligroso asesino, Sirius Black, se escapó de Azkaban, la prisión de los magos, y al parecer está dispuesto a encontrar y matar a Harry. Se sabe también que es la primera persona en escapar de la prisión de magos y nadie sabe cómo lo hizo. Muchos dicen que es por los poderes que adquirió cuando estuvo en el bando de Lord Voldemort. Black es el prisionero de Azkaban que cita el título del libro.
+      </p>
+
+        <h2>
+        Trama
+        </h2>
+        <h3>
+          La escapada
+        </h3>
+        <p>
+          El libro comienza en el verano de 1993, cuando Harry está en la casa de sus tíos. Hermione le ha enviado guías para la limpieza de su Nimbus 2000, por lo cual Harry está muy agradecido. Ron le ha enviado una foto de él y su familia en Egipto, pues ganaron un concurso del diario El Profeta y se fueron a visitar Bill, el hijo mayor de la familia. En la foto aparece su familia, y su rata Scabbers en su hombro.
+          <br><br>
+          Al día siguiente, Harry ve en las noticias que un fugitivo se ha escapado de prisión, llamado Sirius Black, aunque no mencionan de dónde se ha escapado. Harry, por su tío, se entera que su tía Marge pasará una semana con ellos. A Harry no le agrada mucho ella, dado que siempre lo critica por ser una molestia para sus tíos. Harry le pide a su tío que le firme una autorización del colegio para poder visitar Hogsmeade. Su tío le dice que si se comporta con su tía, le firmará el permiso.
+          <br><br>
+          Pasa una semana y Harry ha podido soportar a su tía, aunque en la última noche comienza a criticar a sus padres y Harry se enfurece mucho. Por arte de magia, su tía se infla como un globo y se va volando, y Harry se da cuenta que esa fue magia suya. Harry decide irse de la casa de sus tíos, asegurando que ha sido expulsado de Hogwarts.
+          <br><br>
+          Cuando menos lo esperaba, el autobús noctámbulo aparece, y le dicen a Harry que pueden llevarlo a donde quiera. Harry pide ir al Caldero Chorreante.
+          <br><br>
+          En el bus se entera que el fugitivo que vio antes en las noticias, Sirius Black, fue cómplice de Lord Voldemort, y que mató a trece personas (un mago y doce muggles) en una calle. Harry, para evitar problemas, se hace pasar por Neville Longbottom.
+          <br><br>
+          Al llegar a su destino, el Ministro de Magia, Cornelius Fudge le dice a Harry que pudieron recuperar a su tía y modificarle la memoria, y que cuando acabe el curso podrá volver a casa de sus tíos. Aunque a Harry le desagrada la idea, Fudge le dice que es su único hogar y que debe vivir ahí. Hasta que terminen las vacaciones, Harry alquila una habitación en el Caldero Chorreante.
+        </p>
+        <!-- Link de la referencia -->
+        <p><a href="https://harrypotter.fandom.com/es/wiki/Harry_Potter_y_el_prisionero_de_Azkaban">Saber mas...</a></p>
+    </section>
+
+    <aside class="sidebar">
+        <!-- Imagen del libro/pelicula/casa/personaje -->
+      <h3>Harry Potter y El Prisionero de Azkaban</h3>
+      <img src="Prisionero.jpg" alt="Harry Potter y la Piedra Filosofal">
+    </aside>
+  </main>
+
+  <footer>
+    <p>© 2025 Harry Potter</p>
+  </footer>
+
+</body>
+</html>
