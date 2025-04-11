@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Harry Potter - Cámara Secreta</title>
+
+  <!-- Google Fonts: IM Fell English SC -->
+  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Estilos personalizados -->
+  <style>
+    body {
+      background-image: url('https://images.unsplash.com/photo-1500634240442-06630c1baba2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+      background-size: cover;
+      background-attachment: fixed;
+      color: #f8f9fa;
+      font-family: 'IM Fell English SC', serif;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 3rem;
+      color: #fdd835;
+      text-shadow: 2px 2px 4px #000;
+    }
+
+    .card {
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      margin-bottom: 30px;
+      border: 2px solid #fdd835;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+    }
+
+    .card img {
+      border-top-left-radius: 18px;
+      border-top-right-radius: 18px;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .container {
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+
+    .card-title {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .card-text {
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Harry Potter</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Libros</a>
+              <ul class="dropdown-menu" style="border-top: 5px solid white;">
+                <li><a class="dropdown-item" href="Piedra filosofal.html">La piedra filosofal</a></li>
+                <li><a class="dropdown-item" href="CamaraSecreta.html">La cámara secreta</a></li>
+                <li><a class="dropdown-item" href="Prisionero.html">El prisionero de Azkaban</a></li>
+                <li><a class="dropdown-item" href="Caliz.html">El cáliz de fuego</a></li>
+                <li><a class="dropdown-item" href="Orden.html">La Orden del Fénix</a></li>
+                <li><a class="dropdown-item" href="Misterio.html">El misterio del príncipe</a></li>
+                <li><a class="dropdown-item" href="Reliquias.html">Las reliquias de la Muerte</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Personajes</a>
+              <ul class="dropdown-menu" style="border-top: 5px solid white;">
+                <li><a class="nav-link active" href="personajes.html">Personajes</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Casas</a>
+                <ul class="dropdown-menu" style="border-top: 5px solid white;">
+                  <li><a class="nav-link" href="casas.html">Casas</a></li>
+                <!-- Dropdown de Personajes -->
+               </ul>
+               </li>
+               <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Películas</a>
+                <ul class="dropdown-menu" style="border-top: 5px solid white;">
+                  <li><a class="dropdown-item" href="peli1.html">Harry Potter y la piedra filosofal</a></li>
+                  <li><a class="dropdown-item" href="peli2.html">Harry Potter y la cámara secreta</a></li>
+                  <li><a class="dropdown-item" href="peli3.html">Harry Potter y el prisionero de Azkaban</a></li>
+                  <li><a class="dropdown-item" href="peli4.html">Harry Potter y el cáliz de fuego</a></li>
+                  <li><a class="dropdown-item" href="peli5.html">Harry Potter y la orden del fénix</a></li>
+                  <li><a class="dropdown-item" href="peli6.html">Harry Potter y El Misterio del Principe </a></li>
+                  <li><a class="dropdown-item" href="peli7.html">Harry Potter y las Reliquias de la Muerte</a></li>
+                </ul>
+              </li>
+            <li class="nav-item"><a class="nav-link" href="contenido.html">Contenido</a></li>
+            <li class="nav-item"><a class="nav-link" href="referencia.html">Referencias</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+<br>
+<br>
+<br>
+  <div class="container">
+    <div class="row">
+      <!-- Tarjeta 1: Harry Potter -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="harry.jpg" class="card-img-top" alt="Harry Potter">
+          <div class="card-body">
+            <h5 class="card-title">Harry Potter</h5>
+            <p class="card-text">Harry es un joven mago famoso por sobrevivir al ataque del mago tenebroso Lord Voldemort cuando era un bebé. En su segundo año en Hogwarts, descubre los secretos de la Cámara Secreta.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 2: Hermione Granger -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="hermione.jpeg" class="card-img-top" alt="Hermione Granger">
+          <div class="card-body">
+            <h5 class="card-title">Hermione Granger</h5>
+            <p class="card-text">Hermione es la mejor amiga de Harry y Ron. Es una estudiante brillante y utiliza su inteligencia para ayudar a resolver el misterio de la Cámara Secreta.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 3: Ron Weasley -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="ron.jpg" class="card-img-top" alt="Ron Weasley">
+          <div class="card-body">
+            <h5 class="card-title">Ron Weasley</h5>
+            <p class="card-text">Ron es el mejor amigo de Harry. Leal y valiente, acompaña a Harry en sus aventuras, incluyendo la exploración de la Cámara Secreta.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Segunda fila de tarjetas -->
+    <div class="row">
+      <!-- Tarjeta 4: Tom Riddle -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="toom.jpg" class="card-img-top" alt="Tom Riddle">
+          <div class="card-body">
+            <h5 class="card-title">Tom Riddle</h5>
+            <p class="card-text">Tom Riddle es la versión joven de Lord Voldemort. Fue quien abrió la Cámara Secreta por primera vez y dejó un fragmento de su alma en un diario encantado.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 5: Hechizo - Expelliarmus -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="expe.jpg_large" class="card-img-top" alt="Expelliarmus">
+          <div class="card-body">
+            <h5 class="card-title">Hechizo: Expelliarmus</h5>
+            <p class="card-text">Hechizo desarmador utilizado frecuentemente por Harry. Es simple pero efectivo, ideal para duelos.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 6: Hechizo - Lumos -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="lummm.jpg" class="card-img-top" alt="Lumos">
+          <div class="card-body">
+            <h5 class="card-title">Hechizo: Lumos</h5>
+            <p class="card-text">Este hechizo enciende la punta de la varita del mago como una linterna. Útil en lugares oscuros como la Cámara Secreta.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts necesarios para Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

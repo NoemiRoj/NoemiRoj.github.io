@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="icon.jpg">
+  <title>Harry Potter y el cáliz de fuego</title>
+  
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background-color: #464242;
+      color: #000000;
+    }
+
+    .banner {
+      background: url('banner.jpg') no-repeat center center;
+      background-size: cover;
+      padding: 60px 20px;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    .navbar {
+      background-color: #2c2c2c;
+      padding: 10px 0;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar li {
+      margin: 0 20px;
+    }
+
+    .navbar a {
+      color: rgb(241, 240, 232);
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .navbar a:hover {
+      color: #fff;
+    }
+
+    .contenido {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 20px;
+    }
+
+    .articulo {
+      flex: 3;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      min-width: 300px;
+    }
+
+    .sidebar {
+      flex: 1;
+      padding: 20px;
+      background-color: #2c2c2c;
+      margin-left: 20px;
+      border-radius: 10px;
+      min-width: 200px;
+    }
+
+    .sidebar h3 {
+      color: rgb(255, 255, 255);
+    }
+
+    .sidebar img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background-color: #2c2c2c;
+      color: #ccc;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+    }
+        /* Style for the dropdown container */
+        .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Style for the dropdown button */
+    .dropdown button {
+      background-color: #2c2c2c;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    /* Style for the dropdown content */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      border-radius: 5px;
+    }
+
+    /* Style for dropdown links */
+    .dropdown-content a {
+      color: black;
+      padding: 10px 15px;
+      text-decoration: none;
+      display: block;
+    }
+
+    /* Change link color on hover */
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+
+    /* Show the dropdown content on hover */
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* Change button color on hover */
+    .dropdown:hover button {
+      background-color: #444;
+    }
+  </style>
+</head>
+<body>
+
+    <header>
+            <!-- Dropdown de Libros -->
+            <div class="dropdown">
+                <button>Libros</button>
+                <div class="dropdown-content">
+                    <a href="Piedra filosofal.html">La Piedra Filosofal</a>
+                    <a href="CamaraSecreta.html">La Cámara Secreta</a>
+                    <a href="Prisionero.html">El Prisionero de Azkaban</a>
+                    <a class="nav-link active" aria-current="page" href="Caliz.html">El Caliz de Fuego</a>
+                    <a href="Orden.html">La Orden del Fenix</a>
+                    <a href="Misterio.html">El Misterio del Principe</a>
+                    <a href="Reliquias.html">Las reliquias de la Muerte</a>
+                </div>
+            </div>
+            <div class="dropdown">
+              <button>Personajes</button>
+              <div class="dropdown-content">
+              <a  href="personajes.html"> Personajes</a></div>
+            <!-- Dropdown de Personajes -->
+          </div>
+            <!-- Dropdown de Casas de Hogwarts -->
+            <div class="dropdown">
+              <button>Casas</button>
+              <div class="dropdown-content">
+              <a  href="casas.html"> Casas</a></div>
+            <!-- Dropdown de Personajes -->
+          </div>
+    
+            <!-- Dropdown de Películas -->
+            <div class="dropdown">
+                <button>Películas</button>
+                <div class="dropdown-content">
+                    <a href="peli1.html">La Piedra Filosofal</a>
+                    <a href="peli2.html">La Cámara Secreta</a>
+                    <a href="peli3.html">El Prisionero de Azkaban</a>
+                    <a href="peli4.html">El Caliz de Fuego</a>
+                    <a href="peli5.html">La Orden del Fenix</a>
+                    <a href="peli6.html">El Misterio Del Principe</a>
+                    <a href="peli7.html">Reliquias de la Muerte</a>
+                   
+                </div>
+            </div>
+    
+            <!-- Boton de Contenido -->
+            <button style="background-color: #2c2c2c; color: white; padding: 10px 20px; font-size: 16px; border: none; cursor: pointer; border-radius: 5px; margin: 5px;">
+                <a href="contenido.html" style="color: white; text-decoration: none;">Contenido</a>
+            </button>
+
+            <!-- Boton de Referencias -->
+            <button style="background-color: #2c2c2c; color: white; padding: 10px 20px; font-size: 16px; border: none; cursor: pointer; border-radius: 5px; margin: 5px;">
+                <a href="referencia.html" style="color: white; text-decoration: none;">Referencias</a>
+            </button>
+
+            <!-- Boton de Contacto -->
+            <button style="background-color: #2c2c2c; color: white; padding: 10px 20px; font-size: 16px; border: none; cursor: pointer; border-radius: 5px; margin: 5px;">
+                <a href="contacto.html" style="color: white; text-decoration: none;">Contacto</a>
+            </button>
+        </div>
+    </header>
+
+  <main class="contenido">
+    
+     
+      <video autoplay controls loop playsinline style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; object-fit: cover; z-index: -1;">
+        <source src="v6.mp4" type="video/mp4">
+        
+      </video>
+</body>
+</html>
