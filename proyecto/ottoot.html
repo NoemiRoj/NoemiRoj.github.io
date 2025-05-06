@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Álbum de fotos · Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+      }
+
+      .card {
+        width: 250px;
+        margin: 15px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        text-align: center;
+        transition: transform 0.3s ease;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .card:hover {
+        transform: translateY(-10px);
+      }
+
+      .card img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .card-body {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .modal-content {
+        background-color: #fff;
+        margin: 5% auto;
+        padding: 20px;
+        width: 80%;
+        max-width: 500px;
+        border-radius: 10px;
+      }
+
+      .close {
+        color: #aaa;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .close:hover {
+        color: black;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- Encabezado -->
+    <header>
+      <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container">
+          <a href="#" class="navbar-brand d-flex align-items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-camera" viewBox="0 0 16 16">
+              <path d="M9.5 2a.5.5 0 0 1 .5.5V3h2.5A1.5 1.5 0 0 1 14 4.5v8A1.5 1.5 0 0 1 12.5 14h-9A1.5 1.5 0 0 1 2 12.5v-8A1.5 1.5 0 0 1 3.5 3H6v-.5a.5.5 0 0 1 .5-.5h3z"/>
+              <path d="M8 6a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"/>
+            </svg>
+            <strong>Álbum</strong>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Sección principal -->
+    <main>
+      <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+          <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="fw-light">Ejemplo de Álbum</h1>
+            <p class="lead text-muted">Una colección de fotos con Bootstrap. Puedes agregar tus propias imágenes fácilmente.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Galería de tarjetas -->
+      <div class="album py-5 bg-light">
+        <div class="container d-flex flex-wrap justify-content-center">
+          
+          <!-- Tarjeta: Harry Potter -->
+          <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/d/d7/Harry_Potter_character_poster.jpg" alt="Harry Potter">
+            <div class="card-body">
+              <h5 class="card-title">⚡Harry Potter</h5>
+              <p class="card-text">El niño que vivió. Estudiante de Gryffindor.</p>
+              <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalHarry">Más info</button>
+            </div>
+          </div>
+
+          <!-- Tarjeta: Hermione Granger -->
+          <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/d/d3/Hermione_Granger_poster.jpg" alt="Hermione Granger">
+            <div class="card-body">
+              <h5 class="card-title">📚Hermione Granger</h5>
+              <p class="card-text">La bruja más brillante de su edad. Leal a sus amigos.</p>
+              <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalHermione">Más info</button>
+            </div>
+          </div>
+
+
+          <!-- Tarjeta: Ron Weasley -->
+        <div class="card">
+            <img src="ron.jpg" alt="Ron Weasley">
+            <div class="card-body">
+              <h5 class="card-title">🧡Ron Weasley</h5>
+              <p class="card-text">Fiel amigo y miembro del trío dorado.</p>
+              <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalRon">Más info</button>
+            </div>
+          </div>
+
+          <!-- Tarjeta:  Luna Lovegood -->
+        <div class="card">
+            <img src="luna.jpg" alt="Luna Lovegood">
+            <div class="card-body">
+              <h5 class="card-title">🌙Luna Lovegood</h5>
+              <p class="card-text">Amiga leal y miembro clave de la resistencia.</p>
+              <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalLuna">Más info</button>
+            </div>
+          </div>
+
+          <!-- Tarjeta:  Draco Malfoy -->
+        <div class="card">
+            <img src="Draco_malfoy.jpg" alt=" Draco Malfoy">
+            <div class="card-body">
+              <h5 class="card-title">🐍Draco Malfoy</h5>
+              <p class="card-text">Rival de Harry, conflictuado entre el bien y el mal.</p>
+              <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalDraco">Más info</button>
+            </div>
+          </div>
+
+          <!-- Tarjeta:  Albus Dumbledore-->
+        <div class="card">
+            <img src="albus.webp" alt ="Albus Dumbledore">
+            <div class="card-body">
+              <h5 class="card-title">🧙‍♂️Albus Dumbledore</h5>
+              <p class="card-text">Mentor de Harry y estratega contra Voldemort.</p>
+              <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalAlbus">Más info</button>
+            </div>
+          </div>
+
+          
+          <!-- Tarjeta:   Severus Snape -->
+          <div class="card">
+            <img src="snape.jpg" alt ="Severus Snape">
+            <div class="card-body">
+              <h5 class="card-title">🧪Severus Snape </h5>
+              <p class="card-text">Maestro de Pociones, espía doble.</p>
+              <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalSnape">Más info</button>
+            </div>
+          </div>
+
+          <!-- Tarjeta:    Sirius Black -->
+          <div class="card">
+            <img src="black.webp" alt ="Sirius Black">
+            <div class="card-body">
+              <h5 class="card-title">🐶 Sirius Black </h5>
+              <p class="card-text">Padrino de Harry, animago.</p>
+              <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalBlack">Más info</button>
+            </div>
+          </div>
+
+          <!-- Tarjeta:    Minerva McGonagall -->
+          <div class="card">
+            <img src="mine.webp" alt =" Minerva McGonagall">
+            <div class="card-body">
+              <h5 class="card-title">👓 Minerva McGonagall </h5>
+              <p class="card-text">Profesora de Transformaciones, subdirectora de Hogwarts.</p>
+              <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalMine">Más info</button>
+            </div>
+          </div>
+
+            <!-- Tarjeta:    Neville Longbottom -->
+            <div class="card">
+              <img src="nevi.jpg" alt ="  Neville Longbottom">
+              <div class="card-body">
+                <h5 class="card-title">🌱 Neville Longbottom </h5>
+                <p class="card-text">De alumno tímido a héroe en la batalla final.</p>
+                <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalNevi">Más info</button>
+              </div>
+            </div>
+
+            <!-- Tarjeta:     Lord Voldemort -->
+            <div class="card">
+              <img src="lord.jpg" alt ="Lord Voldemort">
+              <div class="card-body">
+                <h5 class="card-title">💀 Lord Voldemort </h5>
+                <p class="card-text">Villano principal.</p>
+                <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalLord">Más info</button>
+              </div>
+            </div>
+
+        
+          
+
+        </div>
+      </div>
+    </main>
+
+    <!-- Modal: Harry Potter -->
+    <div class="modal fade" id="modalHarry" tabindex="-1" aria-labelledby="modalHarryLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalHarryLabel">Harry Potter (Personaje)</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            <h6><strong>Datos del Personaje</strong></h6>
+            <p><strong>Casa:</strong> Gryffindor</p>
+            <p><strong>Varita:</strong> Acebo con núcleo de pluma de fénix</p>
+            <p><strong>Patronus:</strong> Ciervo</p>
+            <p><strong>Rol:</strong> El Elegido</p>
+            <hr>
+            <h6><strong>Daniel Radcliffe (Actor)</strong></h6>
+            <p><strong>Nacionalidad:</strong> Británico</p>
+            <p><strong>Otros trabajos:</strong> "The Woman in Black", "Swiss Army Man"</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal: Hermione Granger -->
+    <div class="modal fade" id="modalHermione" tabindex="-1" aria-labelledby="modalHermioneLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalHermioneLabel">Hermione Granger (Personaje)</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            <h6><strong>Datos del Personaje</strong></h6>
+            <p><strong>Casa:</strong> Gryffindor</p>
+            <p><strong>Varita:</strong> Vid con núcleo de pelo de unicornio</p>
+            <p><strong>Patronus:</strong> Nutria</p>
+            <p><strong>Rol:</strong> La bruja más brillante de su edad</p>
+            <hr>
+            <h6><strong>Emma Watson (Actriz)</strong></h6>
+            <p><strong>Nacionalidad:</strong> Británica</p>
+            <p><strong>Otros trabajos:</strong> "The Perks of Being a Wallflower", "La Bella y la Bestia"</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal: Ron Weasley -->
+    <div class="modal fade" id="modalRon" tabindex="-1" aria-labelledby="modalRonLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalRonLabel">Ron Weasley (Personaje)</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+              <h6><strong>Datos del Personaje</strong></h6>
+              <p><strong>Casa:</strong> Gryffindor</p>
+              <p><strong>Varita:</strong> Fresno con núcleo de crin de unicornio</p>
+              <p><strong>Patronus:</strong> Jack Russell Terrier</p>
+              <p><strong>Rol:</strong> Mejor amigo de Harry, parte esencial del trío</p>
+              <hr>
+              <h6><strong>Datos de Rupert Grint (Actor)</strong></h6>
+              <p><strong>Nacionalidad:</strong> Británica</p>
+              <p><strong>Otros trabajos:</strong> "Servant" (Apple TV), "Driving Lessons"</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+       <!-- Modal: Luna Lovegood -->
+    <div class="modal fade" id="modalLuna" tabindex="-1" aria-labelledby="modalLunaLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalLunaLabel">Luna Lovegood(Personaje)</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+              <h6><strong>Datos del Personaje</strong></h6>
+              <p><strong>Casa:</strong> Ravenclaw</p>
+              <p><strong>Varita:</strong> Madera desconocida</p>
+              <p><strong>Patronus:</strong> Liebre</p>
+              <p><strong>Rol:</strong> Amiga leal, soñadora y valiente</p>
+              <hr>
+              <h6><strong>Evanna Lynch (Actriz)</strong></h6>
+              <p><strong>Nacionalidad:</strong>Irlandesa</p>
+              <p><strong>Otros trabajos:</strong> " My Name Is Emily, activismo vegano"</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal: Draco Malfoy -->
+    <div class="modal fade" id="modalDraco" tabindex="-1" aria-labelledby="modalDracoLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalDracoLabel">Draco Malfoy(Personaje)</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+              <h6><strong>Datos del Personaje</strong></h6>
+              <p><strong>Casa:</strong> Slytherin</p>
+              <p><strong>Varita:</strong> Espino con núcleo de pelo de unicornio</p>
+              <p><strong>Patronus:</strong> Desconocido</p>
+              <p><strong>Rol:</strong> Rival de Harry, redimido con el tiempo</p>
+              <hr>
+              <h6><strong>Tom Felton(Actor)</strong></h6>
+              <p><strong>Nacionalidad:</strong>Británico</p>
+              <p><strong>Otros trabajos:</strong> " The Flash, Rise of the Planet of the Apes</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+       <!-- Modal: Albus Dumbledore -->
+    <div class="modal fade" id="modalAlbus" tabindex="-1" aria-labelledby="modalAlbusLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalAlbusLabel">Albus Dumbledore(Personaje)</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+              <h6><strong>Datos del Personaje</strong></h6>
+              <p><strong>Casa:</strong> Gryffindor</p>
+              <p><strong>Varita:</strong> Saúco (Varita de Saúco)</p>
+              <p><strong>Patronus:</strong> Fénix</p>
+              <p><strong>Rol:</strong> Director de Hogwarts, mentor de Harry</p>
+              <hr>
+              <h6><strong>Michael Gambon y Richard Harris(Actores)</strong></h6>
+              <p><strong>Nacionalidad:</strong>Irlandés-británico</p>
+              <p><strong>Otros trabajos:</strong> The King’s Speech, Gosford Park</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <!-- Modal: Sirius Black -->
+    <div class="modal fade" id="modalBlack" tabindex="-1" aria-labelledby="modalBlackLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalBlackLabel">Sirius Black(Personaje)</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            <h6><strong>Datos del Personaje</strong></h6>
+            <p><strong>Casa:</strong> Gryffindor</p>
+            <p><strong>Varita:</strong> desconocida</p>
+            <p><strong>Patronus:</strong> Perro</p>
+            <p><strong>Rol:</strong>Padrino de Harry, animago.</p>
+            <hr>
+            <h6><strong>Gary Oldman(Actor)</strong></h6>
+            <p><strong>Nacionalidad:</strong>Británico</p>
+            <p><strong>Otros trabajos:</strong> The Dark Knight, Darkest Hour</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal: Severus Snape -->
+    <div class="modal fade" id="modalSnape" tabindex="-1" aria-labelledby="modalSnapeLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalSnapeLabel">Severus Snape(Personaje)</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            <h6><strong>Datos del Personaje</strong></h6>
+            <p><strong>Casa:</strong> Slytherin</p>
+            <p><strong>Varita:</strong> desconocida</p>
+            <p><strong>Patronus:</strong> Cierva</p>
+            <p><strong>Rol:</strong> Maestro de Pociones, espía doble.</p>
+            <hr>
+            <h6><strong>Alan Rickman(Actor)</strong></h6>
+            <p><strong>Nacionalidad:</strong>Británico</p>
+            <p><strong>Otros trabajos:</strong> Die Hard, Sense and Sensibility</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal: Minerva McGonagall  -->
+    <div class="modal fade" id="modalMine" tabindex="-1" aria-labelledby="modalMineLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalMineLabel">Minerva McGonagall (Personaje)</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            <h6><strong>Datos del Personaje</strong></h6>
+            <p><strong>Casa:</strong> Gryffindor</p>
+            <p><strong>Varita:</strong> Abeto con núcleo de fibra de dragón</p>
+            <p><strong>Patronus:</strong> Gato</p>
+            <p><strong>Rol:</strong> Profesora de Transformaciones, subdirectora de Hogwarts.</p>
+            <hr>
+            <h6><strong>Maggie Smith(Actriz)</strong></h6>
+            <p><strong>Nacionalidad:</strong>Británica</p>
+            <p><strong>Otros trabajos:</strong> "Downton Abbey", "The Best Exotic Marigold Hotel"
+
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <!-- Modal: Neville Longbottom   -->
+     <div class="modal fade" id="modalNevi" tabindex="-1" aria-labelledby="modalNeviLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalNeviLabel">Neville Longbottom (Personaje)</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            <h6><strong>Datos del Personaje</strong></h6>
+            <p><strong>Casa:</strong> Gryffindor</p>
+            <p><strong>Varita:</strong> Cerezo con núcleo de nervio de dragón (segunda varita)</p>
+            <p><strong>Patronus:</strong> No especificado</p>
+            <p><strong>Rol:</strong> De alumno tímido a héroe en la batalla final.</p>
+            <hr>
+            <h6><strong>Matthew Lewis (Actor)</strong></h6>
+            <p><strong>Nacionalidad:</strong>Británico</p>
+            <p><strong>Otros trabajos:</strong> "All Creatures Great and Small", "Me Before You"
+
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <!-- Modal: Neville Longbottom   -->
+     <div class="modal fade" id="modalLord" tabindex="-1" aria-labelledby="modalLordiLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalLordLabel">Lord Voldemort (Personaje)</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            <h6><strong>Datos del Personaje</strong></h6>
+            <p><strong>Casa:</strong> Slytherin</p>
+            <p><strong>Varita:</strong> Tejo con núcleo de pluma de fénix</p>
+            <p><strong>Patronus:</strong> No tiene</p>
+            <p><strong>Rol:</strong> Villano principal de la saga.</p>
+            <hr>
+            <h6><strong>Ralph Fiennes (Actor)</strong></h6>
+            <p><strong>Nacionalidad:</strong>Británico</p>
+            <p><strong>Otros trabajos:</strong> ""The Grand Budapest Hotel", "Schindler's List", "The English Patient".
+
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      
+  
+
+ 
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
