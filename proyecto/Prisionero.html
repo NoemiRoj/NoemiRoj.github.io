@@ -5,148 +5,211 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="icon.jpg">
   <title>El Prisionero de Azkaban</title>
-  
   <style>
-    body {
-      margin: 0;
-      font-family: 'IM Fell English SC', serif;
-      background-color: #464242;
-      color: #000000;
-    }
+  body {
+    margin: 0;
+   font-family: 'IM Fell English SC', serif;
+    background-color: #8e6753;
+    color: #000000;
+  }
 
-    .banner {
-      background: url('banner.jpg') no-repeat center center;
-      background-size: cover;
-      padding: 60px 20px;
-      text-align: center;
-      color: #ffffff;
-    }
+  .banner {
+    background: url('banner.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 60px 20px;
+    text-align: center;
+    color: #ffffff;
+  }
 
-    .navbar {
-      background-color: #2c2c2c;
-      padding: 10px 0;
-    }
+  .navbar {
+    background-color: #503b0f;
+    padding: 10px 0;
+  }
 
-    .navbar ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      margin: 0;
-      padding: 0;
-    }
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
 
-    .navbar li {
-      margin: 0 20px;
-    }
+  .navbar li {
+    margin: 0 20px;
+  }
 
-    .navbar a {
-      color: rgb(241, 240, 232);
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
+  .navbar a {
+    color: rgb(241, 240, 232);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
 
-    .navbar a:hover {
-      color: #fff;
-    }
+  .navbar a:hover {
+    color: #fff;
+  }
 
-    .contenido {
-      display: flex;
-      flex-wrap: wrap;
-      margin: 20px;
-    }
+  .contenido {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+  }
 
-    .articulo {
-      flex: 3;
-      padding: 20px;
-      background-color: #ffffff;
-      border-radius: 10px;
-      min-width: 300px;
-    }
+  .articulo {
+    flex: 3;
+    padding: 20px;
+    background-color: #e7dbc5;
+    border-radius: 10px;
+    min-width: 300px;
+  }
 
-    .sidebar {
-      flex: 1;
-      padding: 20px;
-      background-color: #2c2c2c;
-      margin-left: 20px;
-      border-radius: 10px;
-      min-width: 200px;
-    }
+  .sidebar {
+    flex: 1;
+    padding: 20px;
+    background-color: #503b0f;
+    margin-left: 20px;
+    border-radius: 10px;
+    min-width: 200px;
+  }
 
-    .sidebar h3 {
-      color: rgb(255, 255, 255);
-    }
+  .sidebar h3 {
+    color: rgb(255, 255, 255);
+  }
 
-    .sidebar img {
-      width: 100%;
-      border-radius: 8px;
-      margin-bottom: 10px;
-    }
+  .sidebar img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
 
-    footer {
-      background-color: #2c2c2c;
-      color: #ccc;
-      text-align: center;
-      padding: 10px;
-      margin-top: 20px;
-    }
-        /* Style for the dropdown container */
-        .dropdown {
-      position: relative;
-      display: inline-block;
-    }
+  footer {
+    background-color: #503b0f;
+    color: #ccc;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+  }
+      /* Style for the dropdown container */
+      .dropdown {
+    position: relative;
+    display: inline-block;
+  }
 
-    /* Style for the dropdown button */
-    .dropdown button {
-      background-color: #2c2c2c;
-      color: white;
-      padding: 10px 20px;
-      font-size: 16px;
-      border: none;
-      cursor: pointer;
-      border-radius: 5px;
-    }
+  /* Style for the dropdown button */
+  .dropdown button {
+    background-color: #503b0f;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
 
-    /* Style for the dropdown content */
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #f9f9f9;
-      min-width: 160px;
-      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-      z-index: 1;
-      border-radius: 5px;
-    }
+  /* Style for the dropdown content */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+  }
 
-    /* Style for dropdown links */
-    .dropdown-content a {
-      color: black;
-      padding: 10px 15px;
-      text-decoration: none;
-      display: block;
-    }
+  /* Style for dropdown links */
+  .dropdown-content a {
+    color: black;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+  }
 
-    /* Change link color on hover */
-    .dropdown-content a:hover {
-      background-color: #ddd;
-    }
+  /* Change link color on hover */
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
 
-    /* Show the dropdown content on hover */
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
+  /* Show the dropdown content on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
 
-    /* Change button color on hover */
-    .dropdown:hover button {
-      background-color: #444;
+  /* Change button color on hover */
+  .dropdown:hover button {
+    background-color: #444;
+  }
+  .collage {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .collage img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+  }
+
+  .collage img:hover {
+    transform: scale(1.1);
+    z-index: 1;
+  }
+  table {
+    width: 100%;
+    max-width: 600px;
+    background-color: #ebd08c;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-collapse: collapse;
+    animation: fadeIn 0.6s ease;
+  }
+
+  th, td {
+    padding: 16px 24px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #805931;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+  }
+
+  tr:nth-child(even) {
+    background-color: #ecd2b4;
+  }
+
+  tr:hover {
+    background-color: #e3f2fd;
+    transition: background-color 0.3s ease;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
     }
-  </style>
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
 </head>
 <body>
-
     <header>
         <h1 style="text-align: center; color: white">Harry Potter - Libros</h1>
-    
+        <button style="background-color: #503b0f; color: white; padding: 10px 20px; font-size: 16px; border: none; cursor: pointer; border-radius: 5px; margin: 5px;">
+          <a href="index.html" style="color: white; text-decoration: none;">Harry Potter</a>
+        </button>
             <!-- Dropdown de Libros -->
             <div class="dropdown">
                 <button>Libros</button>
@@ -193,17 +256,17 @@
           </div>
     
             <!-- Boton de Contenido -->
-            <button style="background-color: #2c2c2c; color: white; padding: 10px 20px; font-size: 16px; border: none; cursor: pointer; border-radius: 5px; margin: 5px;">
+            <button style="background-color: #503b0f; color: white; padding: 10px 20px; font-size: 16px; border: none; cursor: pointer; border-radius: 5px; margin: 5px;">
                 <a href="contenido.html" style="color: white; text-decoration: none;">Contenido</a>
             </button>
 
             <!-- Boton de Referencias -->
-            <button style="background-color: #2c2c2c; color: white; padding: 10px 20px; font-size: 16px; border: none; cursor: pointer; border-radius: 5px; margin: 5px;">
+            <button style="background-color: #503b0f; color: white; padding: 10px 20px; font-size: 16px; border: none; cursor: pointer; border-radius: 5px; margin: 5px;">
                 <a href="referencia.html" style="color: white; text-decoration: none;">Referencias</a>
             </button>
 
             <!-- Boton de Contacto -->
-            <button style="background-color: #2c2c2c; color: white; padding: 10px 20px; font-size: 16px; border: none; cursor: pointer; border-radius: 5px; margin: 5px;">
+            <button style="background-color: #503b0f; color: white; padding: 10px 20px; font-size: 16px; border: none; cursor: pointer; border-radius: 5px; margin: 5px;">
                 <a href="contacto.html" style="color: white; text-decoration: none;">Contacto</a>
             </button>
         </div>
@@ -244,12 +307,60 @@
         </p>
         <!-- Link de la referencia -->
         <p><a href="https://harrypotter.fandom.com/es/wiki/Harry_Potter_y_el_prisionero_de_Azkaban">Saber mas...</a></p>
+        
+        <div class="collage">
+          <img src="a1.jpg" alt="Imagen 1">
+          <img src="a2.jpg" alt="Imagen 2">
+          <img src="a3.jpg" alt="Imagen 3">
+          <img src="a4.jpg" alt="Imagen 4">
+          <img src="a5.jpg" alt="Imagen 5">
+          <img src="a6.jpeg" alt="Imagen 6">
+        </div>
     </section>
 
     <aside class="sidebar">
         <!-- Imagen del libro/pelicula/casa/personaje -->
       <h3>Harry Potter y El Prisionero de Azkaban</h3>
       <img src="Prisionero.jpg" alt="Harry Potter y la Piedra Filosofal">
+      <table>
+        <thead>
+          <tr>
+            <th colspan="2">J. K. Rowling</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Género</td>
+            <td>Novela</td>
+          </tr>
+          <tr>
+            <td>Subgénero</td>
+            <td>Fantasía <br>Aventuras</td>
+          </tr>
+          <tr>
+            <td>Temas</td>
+            <td>	Mago del universo de Harry Potter <br> magia en Harry Potter</td>
+          </tr>
+          <tr>
+            <td>Título Original</td>
+            <td>	Harry Potter and the Prisoner of Azkaban</td>
+          </tr>
+          <tr>
+            <td>País</td>
+            <td>Reino Unido</td>
+          </tr>
+          <tr>
+            <td align="center">Fecha de Publicación</td>
+            <td>1999</td>
+          </tr>
+        </tbody>
+      </table>
+    </aside>
+  </main>
+
+  <footer>
+    <p>© 2025 Harry Potter</p>
+  </footer>
     </aside>
   </main>
 
