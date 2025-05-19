@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title> Unidad 03| Actividad No. 05 </title>
+    <meta charset="utf-8">
+    <meta name="Autor" content="Acosta Rojas Noemi">
+    <meta name="Fecha" content="08 de Mayo 2025">
+    <meta name="Resumen" content="Formatos">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <script>
+        function resumenForm(){
+            //obtener acceso al formulario
+            let varform = document.forms["FrmRegistro"] //aqui se manda a buscar en el array de los formularios todos el indice que corresponda a: FrmRegistro
+            //obtener acceso a los controles
+            let varNombre = varform.elements["textinput"];
+            alert("Hola " + varNombre.value);
+
+
+            //otro ejemplo
+            let varCaden = "Resumen de datos capturados";
+            varNombre = varform.elements["textinput"];
+            varCaden += "\n Nombre de usuario : "  + varNombre.value;
+
+            let varClave= varform.elements["passwordinput"];
+            varCaden += "\nContraseña: " + varClave.value;
+
+            //::: Y así con todos los los elementos del forms
+            let varCorreo= varform.elements["Correo"];
+            varCaden += "\nCorreo: " + varCorreo.value;
+
+            let varTelefono= varform.elements["Telefono"];
+            varCaden += "\nTelefono: " + varTelefono.value;
+
+            alert(varCaden);
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Unidad 3 | Actividad 05:: tema (JavaScript)</h1>
+    <form class="form-horizontal" action="#" method="post" onsubmit="resumenForm()" name="FrmRegistro">
+        <fieldset>
+
+            <!-- Form Name -->
+            <legend>Ejercicio de formulario ya preprogramado</legend>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="textinput">Nombre</label>
+                <div class="col-md-8">
+                    <input id="textinput" name="textinput" type="text" placeholder="Nombre"
+                        class="form-control input-md">
+                    <span class="help-block">Escribe tu nombre completo</span>
+                </div>
+            </div>
+
+            <!-- Password input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="passwordinput">Contraseña</label>
+                <div class="col-md-4">
+                    <input id="passwordinput" name="passwordinput" type="password" placeholder=""
+                        class="form-control input-md">
+
+                </div>
+            </div>
+
+            <!-- Prepended text-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="Telefono">Telefono</label>
+                <div class="col-md-4">
+                    <div class="input-group">
+                        <span class="input-group-addon">+52</span>
+                        <input id="Telefono" name="Telefono" class="form-control" placeholder="44444444" type="text">
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Textarea -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="Mensaje">Mensaje</label>
+                <div class="col-md-4">
+                    <textarea class="form-control" id="Mensaje" name="Mensaje">Escribe un mensaje</textarea>
+                </div>
+            </div>
+
+            <!-- Appended Input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="Correo">Correo</label>
+                <div class="col-md-8">
+                    <div class="input-group">
+                        <input id="Correo" name="Correo" class="form-control" placeholder="Ejemplo" type="text">
+                        <span class="input-group-addon">@upslp.edu.mx</span>
+                    </div>
+
+                </div>
+            </div>
+            <!-- Button -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="Enviar"></label>
+                <div class="col-md-4">
+                    <button id="Enviar" name="Enviar" class="btn btn-primary">Enviar</button>
+                </div>
+            </div>
+
+        </fieldset>
+    </form>
+
+</body>
+
+</html>

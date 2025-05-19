@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title> Unidad 03| Actividad No. 04 </title>
+    <meta charset="utf-8">
+    <meta name="Autor" content="Acosta Rojas Noemi">
+    <meta name="Fecha" content="30 de abril 2025">
+    <meta name="Resumen" content="Formatos">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        i{
+            text-transform: uppercase;
+            color: white;
+            background-color: navy;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Unidad 3 | Actividad 04:: tema (JavaScript)</h1>
+    <ol>
+        <li id="valor-1"><strong>UPSLP</strong></li>
+        <li id="valor-2"></li>
+        <li id="valor-3"></li>
+        <li id="valor-4"></li>
+        <li id="valor-5"></li>
+        <li id="valor-6"></li>
+        <li id="valor-7">ISTEM (<i>San Luis Potosi</i> )</li>
+        <li id="valor-8"></li>
+        <li id="valor-9"></li>
+        <li id="valor-10"></li>
+    </ol>
+    <script>
+        //tip, para poner algun elemento con ID, puedes poner: nombredelaEtiqueta#NombreDelIde
+        //ejemplo li#valor$*10 = escribira 10 li con ID valor del 1 al 10
+
+        document.getElementById("valor-1").textContent = 'UCEM';
+        //recuperar contenido
+        let varTemp = document.getElementById("valor-1").textContent;
+        document.getElementById("valor-3").textContent = varTemp + "!!!";
+
+        //textContent
+        varTemp = document.getElementById("valor-7").textContent;
+        document.getElementById("valor-8").textContent = varTemp;
+
+        //innertext
+        varTemp=document.getElementById("valor-2").innerText;
+        document.getElementById("valor-9").innerText = varTemp;
+
+        //innerhtml
+        varTemp = document.getElementById("valor-7").innerHTML;
+        document.getElementById("valor-10").innerHTML = varTemp;
+    </script>
+</body>
+
+</html>

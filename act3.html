@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title> Unidad 03| Actividad No. 01 </title>
+    <meta charset="utf-8">
+    <meta name="Autor" content="Acosta Rojas Noemi">
+    <meta name="Fecha" content="30 de abril 2025">
+    <meta name="Resumen" content="Formatos">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+    <h1>Unidad 3 | Actividad 03:: tema (JavaScript)</h1>
+    <script>
+        let opc = Number(prompt("Elige una de las sig opciones: \n1.-Sumar\n2.-Restar\n3.-Multiplicar\n4.-Dividir"));
+        let va1 = Number(prompt("Cual es el primer operado: "));
+        let va2 = Number(prompt("Cual es el segundo: "));
+
+        switch (opc) {
+            case 1:
+                document.write("<h3>Operacion Suma</h3>")
+                document.write("<code>" + va1 + " + " + va2 + " = " + (va1+va2) + "</code>")
+                break;
+            case 2:
+                document.write("<h3>Operacion Resta</h3>")
+                document.write("<code>" + va1 + " - " + va2 + " = " + (va1-va2) + "</code>")
+                va1 = va1 - va2;
+                break;
+            case 3:
+                document.write("<h3>Operacion Multiplicar</h3>")
+                document.write("<code>" + va1 + " x " + va2 + " = " + (va1*va2) + "</code>")
+                va1 = va1 * va2;
+                break;
+            case 4:
+                document.write("<h3>Operacion Dividir</h3>")
+                document.write("<code>" + va1 + " / " + va2 + " = " + (va1/va2) + "</code>")
+                va1 = va1 / va2;
+                break;
+            default:
+                alert("Operacion invalida");
+                break;
+        }
+       
+    </script>
+</body>
+
+</html>

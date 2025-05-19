@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title> Unidad 03| Actividad No. 3.1 </title>
+    <meta charset="utf-8">
+    <meta name="Autor" content="Acosta Rojas Noemi">
+    <meta name="Fecha" content="30 de abril 2025">
+    <meta name="Resumen" content="Formatos">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        table,
+        td,
+        th {
+            border: 1px solid #595959;
+            border-collapse: collapse;
+        }
+
+        td,
+        th {
+            padding: 3px;
+            width: 100px;
+            height: 40px;
+        }
+
+        th {
+            background: #f0e6cc;
+        }
+
+
+        tr:hover {
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Unidad 3 | Actividad 03-1:: tema (JavaScript)</h1>
+    Creacion de tablas automaticas
+
+    <script>
+        let numero = Number(prompt("Dime el numero para hacer la tabla de multiplicar: "))
+        let i = 10;
+        if (numero <= 10) {
+            document.write("<table>");
+            document.write("|<tr><td>No.</td><td>Suma</td><td>Multiplicacion</td></tr>");
+            for (i = 1; i <= 10; i++) {
+                document.write("<tr><td>" + i + "</td><td>" + numero + " + " + i + " = " + (numero + i) + "</td><td>" + numero + " x " + i + " = " + (numero * i) + "</td></tr>")
+            }
+        } else {
+            alert("Numero invalido")
+        }
+    </script>
+
+</body>
+
+</html>
