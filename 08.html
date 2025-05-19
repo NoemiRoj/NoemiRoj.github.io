@@ -1,43 +1,220 @@
 <!DOCTYPE html>
-<html lang="es">
-    <head>
-        <!-- Sección para el encabezado de la página -->
-        <title>Unidad 02 | Actividad No. 08</title>
+<html lang-" es" >
+  <head>
+ <title>Unidad 02 | Actividad No. 08</title>
         <link rel="icon" type="image/x-icon" href="favicon.ico">
         <meta charset="utf-8">
         <meta name="Autor" content="Acosta Rojas Noemi">
         <meta name="Fecha" content="Lunes 07 de Abril de 2025">
         <meta name="Resumen" content="Efectos">
         <link rel="stylesheet" type="text/css" href="08.css">
-    </head>
-    <body>
-        <!-- Sección para el contenido de la página web-->
-        <h1>Unidad 02 | Actividad 08 | Tema: Efectos</h1>
-        <h2>Menú Horizontal</h2>
-        &Int;
-            <span class="menuHorizontal"><a href="#">Opción No. 1</a></span>&Int;
-            <span class="menuHorizontal"><a href="#">Opción No. 2</a></span>&Int;
-            <span class="menuHorizontal"><a href="#">Opción No. 3</a></span>&Int;
-            <span class="menuHorizontal"><a href="#">Opción No. 4</a></span>&Int;
-            <span class="menuHorizontal"><a href="#">Opción No. 5</a></span>&Int;
-        <h2>Menú Vertical</h2>
-            <div class="menuVertical"><a href="#">Opción No. 1</a></div>
-            <div class="menuVertical"><a href="#">Opción No. 2</a></div>
-            <div class="menuVertical"><a href="#">Opción No. 3</a></div>
-            <div class="menuVertical"><a href="#">Opción No. 4</a></div>
-            <div class="menuVertical"><a href="#">Opción No. 5</a></div>
-        <h2>Animaciones</h2>
-        <h3>Cubo</h3>
-            <div id="element">
-                <div class="face front">1</div>
-                <div class="face back">2</div>
-                <div class="face right">3</div>
-                <div class="face left">4</div>
-                <div class="face top">5</div>
-                <div class="face bottom">6</div>
-            </div>
-        <h3>Barra de Progreso</h3>
-            <div class="barraProgreso">&nbsp;</div>
-        <h3>Rainbow</h3>
-    </body>
+  <style>
+      #miEstilo{
+          border: 5px solid black;
+      }
+      #miEstilo th, #miEstilo td{ border:1px dotted gray}
+      .miEstilo{ border: 3px dashed dodgerblue;}
+      .miEstilo th, .miEstilo td{ border: 1px dotted skyblue}
+      .miEstilo tr:nth-child(odd){background-color: skyblue;}
+      .zoom:hover{font-size: 25px; background-color: green;}
+      .menuHorizontal a {text-decoration: none; color: crimson;}
+.menuVertical a {text-decoration: none; color: white;}
+.menuHorizontal a:hover { text-decoration: underline;}
+.menuVertical a:hover { text-decoration: underline;}
+
+/* <span class="menuHorizontal"><a href="#">Opcion No.1</a></span> */
+.menuHorizontal {
+    height: 75%; font-size: 75%;
+    transition: height 750ms, font-size 750ms;
+}
+
+.menuHorizontal:hover{
+    height: 125%; font-size: 125%;
+}
+
+/* <div class="menuVertical"><a href="#">Opcion No.1</a></div> */
+.menuVertical{
+    border: 1px solid black;
+    height: 20px; width: 100px;
+    background-color: deepskyblue;
+    transition: width 650ms, background-color 650ms;
+}
+.menuVertical:hover{
+    width: 200px;
+    background-color: deeppink;
+    transform: matrix3d(122);
+}
+#cubo {
+
+margin: 50px auto;
+
+width: 100px; height: 100px;
+
+transform: rotate3d(1, 1, 1, 30deg);
+
+transform-style: preserve-3d;
+
+transition: transform 3s;
+
+}
+#cubo:hover, #cubo:focus {
+
+transform: rotate3d(1, 1, 1, 180deg);
+
+}
+
+.cara {
+
+width: 100%; height: 100%;
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+position: absolute;
+
+backface-visibility: inherit;
+
+font-size: 50px;
+
+color: black;
+
+}
+.front { background: rgba(0, 210, 210, 0.75); transform: translateZ(50px); }
+
+.back { background: rgba(0, 210, 0, 0.75); transform: rotateY(180deg) translateZ(50px); }
+
+.top { background: rgba(210, 210, 0, 0.75); transform: rotateX(90deg) translateZ(50px); }
+
+.bottom { background: rgba(210, 0, 210, 0.75); transform: rotateX(-90deg) translateZ(50px); }
+
+.left { background: rgba(0, 0, 210, 0.75); transform: rotateY(-90deg) translateZ(50px); } 
+
+.right { background: rgba(210, 0, 0, 0.75); transform: rotateY(90deg) translateZ(50px); }
+
+.barraProgreso {
+
+height: 25px; width: 100%; background-color: gray;
+
+color: black; font-size: 125%; font-weight: bold; text-align: center;
+
+text-transform: uppercase; animation-timing-function: linear; animation-direction: reverse;
+
+animation-name: progreso; animation-duration: 10s; animation-delay: 1.5s;
+
+}
+
+@keyframes progreso {
+
+0% { background-color: red; width: 0%; }
+
+50% { background-color: gold; width: 50%; }
+
+100% { background-color: darkgreen; width: 100%; }
+
+}
+
+.rainbow {
+
+width: 100px; height: 100px; color: white;
+
+border: 2px dashed black;
+
+animation-name: rgb; animation-duration: 5s;
+
+animation-timing-function: linear;
+
+animation-iteration-count: infinite;
+
+}
+
+.arcoiris {
+
+width: 100px; height: 100px; color: white;
+
+border: 2px dashed black;
+
+animation-name: rgb; animation-duration: 5s;
+
+animation-iteration-count: infinite;
+
+}
+
+@keyframes rgb {
+
+0% { background-color: green; }
+
+16% { background-color: yellow; }
+
+33% { background-color: orange; }
+
+50% { background-color: red; }
+
+67% { background-color: purple; }
+
+82% { background-color: blue; }
+
+100% { background-color:green;}
+
+}
+
+  </style>
+</head>
+<body>
+<!--Llenar el titulo y pegar el contenido-->
+<h1>Unidad 2 | Actividad 08 </h1>
+<h1> Tema (Efectos) </h1>
+<h2> Tabla con Estilo por ID</h2>
+<table id="miEstilo">
+  <thead>
+<tr><th></th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th></tr>
+<tr><td>1</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>2</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>3</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>4</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>5</td><td></td><td></td><td></td><td></td><td></td></tr>
+  </thead>
+</table>
+<h2 class="miEstilo zoom">Tabla con estilo por CLASS</h2>
+<table class="miEstilo">
+  <thead>
+      <tr><th></th><th class="zoom">A</th><th class="zoom">B</th><th class="zoom">C</th><th class="zoom">D</th><th>E</th></tr>
+      <tr><td>1</td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>2</td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>3</td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>4</td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>5</td><td></td><td></td><td></td><td></td><td></td></tr>
+          </thead>
+</table>
+<h2>Menú Horizontal</h2>
+&int;
+<span class="menuHorizontal"><a href="#">Opcion No.1</a></span>&int;
+<span class="menuHorizontal"><a href="#">Opcion No.2</a></span>&int;
+<span class="menuHorizontal"><a href="#">Opcion No.3</a></span>&int;
+<span class="menuHorizontal"><a href="#">Opcion No.4</a></span>&int;
+<span class="menuHorizontal"><a href="#">Opcion No.5</a></span>&int;
+<h2>Menú Vertical</h2>
+<div class="menuVertical"><a href="#">Opcion No.1</a></div>
+<div class="menuVertical"><a href="#">Opcion No.2</a></div>
+<div class="menuVertical"><a href="#">Opcion No.3</a></div>
+<div class="menuVertical"><a href="#">Opcion No.4</a></div>
+<div class="menuVertical"><a href="#">Opcion No.5</a></div>
+<h2>Animacion</h2>
+<h3> Cubo</h3>
+<div id = "cubo">
+  <div class = "cara front">I</div>
+  <div class = "cara top">II</div>
+  <div class = "cara right">III</div>
+  <div class = "cara left">IV</div>
+  <div class = "cara bottom">V</div>
+  <div class = "cara back">VI</div>
+</div>
+<h3> Barra de Progreso</h3>
+<div class="barraProgreso"> &nbsp;</div>
+<h3> RainBow</h3>
+<div class="rainbow">Suavizado</div>
+<div class="arcoiris">Normal</div>
+</body>
 </html>
