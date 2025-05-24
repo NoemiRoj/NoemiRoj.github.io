@@ -13,7 +13,7 @@
       background-color: #464242;
       color: #000000;
     }
-
+    
     .banner {
       background: url('banner.jpg') no-repeat center center;
       background-size: cover;
@@ -140,6 +140,70 @@
     .dropdown:hover button {
       background-color: #444;
     }
+
+    .collage {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .collage img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+  }
+
+  .collage img:hover {
+    transform: scale(1.1);
+    z-index: 1;
+  }
+  table {
+    width: 100%;
+    max-width: 600px;
+    background-color: #3e3e3d;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-collapse: collapse;
+    animation: fadeIn 0.6s ease;
+  }
+
+  th, td {
+    padding: 16px 24px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #5a554f;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+  }
+
+  tr:nth-child(even) {
+    background-color: #dedede;
+  }
+
+  tr:hover {
+    background-color: #fbfde3;
+    transition: background-color 0.3s ease;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
   </style>
 </head>
 <body>
@@ -235,12 +299,53 @@
         </p>
         <!-- Link de la referencia -->
         <p><a href="https://harrypotter.fandom.com/es/wiki/Harry_Potter_y_las_Reliquias_de_la_Muerte">Saber mas...</a></p>
+        <div class="collage">
+  <img src="r1.jpg" alt="Imagen 1">
+  <img src="r2.jpg" alt="Imagen 2">
+  <img src="r3.jpg" alt="Imagen 3">
+  <img src="r4.jpg" alt="Imagen 4">
+  <img src="r5.jpg" alt="Imagen 5">
+  <img src="r6.jpg" alt="Imagen 6">
+</div>
     </section>
 
     <aside class="sidebar">
         <!-- Imagen del libro/pelicula/casa/personaje -->
       <h3>Harry Potter y las Reliquias de la Muerte</h3>
       <img src="Reliquias.jpg" alt="Harry Potter y las Reliquias de la Muerte">
+      <table>
+        <thead>
+          <tr>
+            <th colspan="2">J. K. Rowling</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Género</td>
+            <td>Novela</td>
+          </tr>
+          <tr>
+            <td>Subgénero</td>
+            <td>Fantasía <br>Aventuras</td>
+          </tr>
+          <tr>
+            <td>Temas</td>
+            <td>Mago <br>Piedra Filosofal</td>
+          </tr>
+          <tr>
+            <td>Título Original</td>
+            <td>Harry Potter and the Deathly Hallows</td>
+          </tr>
+          <tr>
+            <td>País</td>
+            <td>Reino Unido</td>
+          </tr>
+          <tr>
+            <td align="center">Fecha de Publicación</td>
+            <td>2007</td>
+          </tr>
+        </tbody>
+      </table>
     </aside>
   </main>
 
